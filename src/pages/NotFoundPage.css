@@ -1,0 +1,68 @@
+.nf-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-deep);
+    padding-top: 80px;
+}
+
+.nf-page__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.nf-page__orb--left {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #D81B60 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+}
+
+.nf-page__orb--right {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #1565C0 0%, transparent 70%);
+    bottom: -80px;
+    right: -80px;
+}
+
+.nf-page__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.nf-page__num {
+    font-size: 8rem;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    opacity: 0.4;
+}
+
+.nf-page__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.nf-page__desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 400px;
+    line-height: 1.7;
+}

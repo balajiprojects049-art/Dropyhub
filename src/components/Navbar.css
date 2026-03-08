@@ -1,0 +1,221 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 18px 0;
+    transition: all 0.4s ease;
+}
+
+.navbar--scrolled {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--navbar-border);
+    padding: 12px 0;
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.navbar__logo img {
+    height: 48px;
+    object-fit: contain;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    justify-content: center;
+}
+
+.navbar__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+    border: 1px solid transparent;
+}
+
+.navbar__link:hover {
+    color: var(--text-primary);
+    background: var(--surface);
+}
+
+.navbar__link--active {
+    color: var(--text-primary) !important;
+    background: rgba(194, 24, 91, 0.1) !important;
+    border-color: rgba(194, 24, 91, 0.2) !important;
+}
+
+.navbar__cta {
+    font-size: 13.5px;
+    padding: 10px 22px;
+    margin-left: 8px;
+}
+
+/* --- Right side (toggle + hamburger) --- */
+.navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* ======= THEME TOGGLE ======= */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 12px 6px 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    white-space: nowrap;
+}
+
+.theme-toggle:hover {
+    border-color: var(--pink);
+    box-shadow: 0 0 12px rgba(194, 24, 91, 0.2);
+}
+
+.theme-toggle__track {
+    width: 28px;
+    height: 28px;
+    background: var(--gradient-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+}
+
+[data-theme="light"] .theme-toggle__track {
+    background: var(--gradient-blue);
+}
+
+.theme-toggle__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle__label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover .theme-toggle__label {
+    color: var(--text-primary);
+}
+
+/* Mobile: hide toggle in main links list on desktop */
+.navbar__toggle-mobile {
+    display: none;
+}
+
+/* ======= HAMBURGER ======= */
+.navbar__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.navbar__hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar__hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 960px) {
+    .navbar__hamburger {
+        display: flex;
+    }
+
+    /* Hide desktop toggle */
+    .navbar__right .theme-toggle {
+        display: none;
+    }
+
+    /* Show mobile toggle inside the menu */
+    .navbar__toggle-mobile {
+        display: flex;
+        width: 100%;
+    }
+
+    .navbar__toggle-mobile .theme-toggle {
+        width: 100%;
+        justify-content: flex-start;
+        border-radius: 10px;
+        padding: 10px 16px;
+    }
+
+    .navbar__links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--navbar-bg);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px;
+        gap: 4px;
+        align-items: stretch;
+    }
+
+    .navbar__links--open {
+        display: flex;
+    }
+
+    .navbar__link {
+        text-align: center;
+    }
+
+    .navbar__cta {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,105 @@
+.how__header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.how__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto repeat(1, 1fr);
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+/* Actually a flex layout is cleaner for arrows */
+.how__steps {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+.how__step {
+    flex: 1;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.how__step:hover {
+    border-color: rgba(216, 27, 96, 0.4);
+    transform: translateY(-4px);
+}
+
+.how__num {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.how__step-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.how__step-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.how__arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+/* CTA Strip */
+.how__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 36px;
+    border-color: rgba(216, 27, 96, 0.25);
+    background: linear-gradient(135deg, rgba(216, 27, 96, 0.08), rgba(21, 101, 192, 0.08));
+}
+
+.how__cta-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 4px;
+}
+
+.how__cta-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+@media(max-width: 960px) {
+    .how__steps {
+        flex-direction: column;
+    }
+
+    .how__arrow {
+        transform: rotate(90deg);
+    }
+
+    .how__cta {
+        flex-direction: column;
+        text-align: center;
+    }
+}
