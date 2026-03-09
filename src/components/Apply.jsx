@@ -3,20 +3,41 @@ import { Link } from 'react-router-dom';
 import './Apply.css';
 
 const Apply = () => {
-    const [form, setForm] = useState({ name: '', phone: '', city: '', vehicle: '', experience: '' });
+    const [form, setForm] = useState({
+        name: '', phone: '', email: '', city: '', area: '', age: '',
+        hasBike: '', bikeModel: '', bikeReg: '', drivingLicense: '',
+        preferredCompany: [], jobType: [], experience: '', employmentStatus: '', message: ''
+    });
     const [submitted, setSubmitted] = useState(false);
 
     const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
+
+    // Handlers for checkboxes
+    const handleCheckboxArrayChange = (e, fieldName) => {
+        const { value, checked } = e.target;
+        setForm(prev => {
+            const currentArr = prev[fieldName];
+            if (checked) {
+                return { ...prev, [fieldName]: [...currentArr, value] };
+            } else {
+                return { ...prev, [fieldName]: currentArr.filter(item => item !== value) };
+            }
+        });
+    };
+
     const handleSubmit = e => {
         e.preventDefault();
         setSubmitted(true);
     };
 
+    const COMPANY_OPTIONS = ['Swiggy', 'Zepto', 'Amazon', 'Flipkart', 'Rapido', 'Blinkit', 'Swiggy Instamart', 'Other'];
+    const JOB_TYPES = ['Delivery Executive', 'Warehouse Associate', 'Store Associate (Blinkit / Zepto / Instamart)'];
+
     return (
         <section className="apply section section-alt" id="apply">
             <div className="container">
                 <div className="apply__inner">
-                    {/* Left */}
+                    {/* Left side unchanged */}
                     <div className="apply__info">
                         <div className="section-tag">Apply Now</div>
                         <h2 className="section-title">
@@ -75,42 +96,142 @@ const Apply = () => {
                                 <button className="btn-primary" onClick={() => setSubmitted(false)}>Submit Another</button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="apply__form">
-                                <h3 className="apply__form-title">Join as Delivery Partner</h3>
+                            <form onSubmit={handleSubmit} className="apply__form apply__form--long">
+                                <h3 className="apply__form-title">DropyHub – Delivery Executive Application Form</h3>
                                 <p className="apply__form-sub">Fill in your details and we'll get you started.</p>
 
-                                <div className="apply__field">
-                                    <label htmlFor="name">Full Name *</label>
-                                    <input id="name" name="name" type="text" placeholder="Your full name" value={form.name} onChange={handleChange} required />
-                                </div>
-                                <div className="apply__field">
-                                    <label htmlFor="phone">Mobile Number *</label>
-                                    <input id="phone" name="phone" type="tel" placeholder="+91 98XXX XXXXX" value={form.phone} onChange={handleChange} required />
-                                </div>
-                                <div className="apply__field">
-                                    <label htmlFor="city">City *</label>
-                                    <input id="city" name="city" type="text" placeholder="Hyderabad, Bangalore..." value={form.city} onChange={handleChange} required />
-                                </div>
+                                {/* 1. Full Name & 2. Mobile */}
                                 <div className="apply__row">
                                     <div className="apply__field">
-                                        <label htmlFor="vehicle">Vehicle Type</label>
-                                        <select id="vehicle" name="vehicle" value={form.vehicle} onChange={handleChange}>
+                                        <label>1. Full Name *</label>
+                                        <input name="name" type="text" placeholder="Your full name" value={form.name} onChange={handleChange} required />
+                                    </div>
+                                    <div className="apply__field">
+                                        <label>2. Mobile Number *</label>
+                                        <input name="phone" type="number" placeholder="Enter mobile number" value={form.phone} onChange={handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* 3. Email & 6. Age */}
+                                <div className="apply__row">
+                                    <div className="apply__field">
+                                        <label>3. Email ID (Optional)</label>
+                                        <input name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} />
+                                    </div>
+                                    <div className="apply__field">
+                                        <label>6. Age *</label>
+                                        <input name="age" type="number" placeholder="Enter your age" value={form.age} onChange={handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* 4. City & 5. Area */}
+                                <div className="apply__row">
+                                    <div className="apply__field">
+                                        <label>4. City *</label>
+                                        <input name="city" type="text" placeholder="E.g., Hyderabad" value={form.city} onChange={handleChange} required />
+                                    </div>
+                                    <div className="apply__field">
+                                        <label>5. Area / Location *</label>
+                                        <input name="area" type="text" placeholder="E.g., Madhapur" value={form.area} onChange={handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* 7. Do You Have a Bike? */}
+                                <div className="apply__field">
+                                    <label>7. Do You Have a Bike? *</label>
+                                    <div className="apply__radio-group">
+                                        <label className="apply__radio-label">
+                                            <input type="radio" name="hasBike" value="Yes" onChange={handleChange} required />
+                                            <span>Yes</span>
+                                        </label>
+                                        <label className="apply__radio-label">
+                                            <input type="radio" name="hasBike" value="No" onChange={handleChange} required />
+                                            <span>No (Need Bike Rental)</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {/* 8. Bike Details (Conditional) */}
+                                {form.hasBike === 'Yes' && (
+                                    <div className="apply__row apply__conditional-block">
+                                        <div className="apply__field">
+                                            <label>8a. Bike Model *</label>
+                                            <input name="bikeModel" type="text" placeholder="E.g., Honda Activa" value={form.bikeModel} onChange={handleChange} required />
+                                        </div>
+                                        <div className="apply__field">
+                                            <label>8b. Bike Registration Number *</label>
+                                            <input name="bikeReg" type="text" placeholder="E.g., TS09 XX 1234" value={form.bikeReg} onChange={handleChange} required />
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* 9. Driving License */}
+                                <div className="apply__field">
+                                    <label>9. Driving License Available? *</label>
+                                    <div className="apply__radio-group">
+                                        <label className="apply__radio-label">
+                                            <input type="radio" name="drivingLicense" value="Yes" onChange={handleChange} required />
+                                            <span>Yes</span>
+                                        </label>
+                                        <label className="apply__radio-label">
+                                            <input type="radio" name="drivingLicense" value="No" onChange={handleChange} required />
+                                            <span>No</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {/* 10. Preferred Company */}
+                                <div className="apply__field">
+                                    <label>10. Preferred Company *</label>
+                                    <div className="apply__checkbox-grid">
+                                        {COMPANY_OPTIONS.map(company => (
+                                            <label key={company} className="apply__check-label">
+                                                <input type="checkbox" value={company} onChange={(e) => handleCheckboxArrayChange(e, 'preferredCompany')} />
+                                                <span>{company}</span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* 11. Job Type */}
+                                <div className="apply__field">
+                                    <label>11. Job Type Interested *</label>
+                                    <div className="apply__checkbox-group">
+                                        {JOB_TYPES.map(job => (
+                                            <label key={job} className="apply__check-label">
+                                                <input type="checkbox" value={job} onChange={(e) => handleCheckboxArrayChange(e, 'jobType')} />
+                                                <span>{job}</span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* 12. Experience & 13. Employment Status */}
+                                <div className="apply__row">
+                                    <div className="apply__field">
+                                        <label>12. Previous Delivery Experience *</label>
+                                        <select name="experience" value={form.experience} onChange={handleChange} required>
                                             <option value="">Select...</option>
-                                            <option value="own-bike">Own Bike</option>
-                                            <option value="own-3w">Own 3-Wheeler</option>
-                                            <option value="need-rental">Need Rental Vehicle</option>
+                                            <option value="Fresher">Fresher</option>
+                                            <option value="0-6 Months">0–6 Months</option>
+                                            <option value="6-12 Months">6–12 Months</option>
+                                            <option value="1+ Year">1+ Year</option>
                                         </select>
                                     </div>
                                     <div className="apply__field">
-                                        <label htmlFor="experience">Experience</label>
-                                        <select id="experience" name="experience" value={form.experience} onChange={handleChange}>
+                                        <label>13. Current Employment Status *</label>
+                                        <select name="employmentStatus" value={form.employmentStatus} onChange={handleChange} required>
                                             <option value="">Select...</option>
-                                            <option value="0-6m">0–6 months</option>
-                                            <option value="6-12m">6–12 months</option>
-                                            <option value="1-3yr">1–3 years</option>
-                                            <option value="3yr+">3+ years</option>
+                                            <option value="Working">Working</option>
+                                            <option value="Not Working">Not Working</option>
                                         </select>
                                     </div>
+                                </div>
+
+                                {/* 14. Message */}
+                                <div className="apply__field">
+                                    <label>14. Message / Additional Details (Optional)</label>
+                                    <textarea name="message" rows="3" placeholder="Any other details you want to share..." value={form.message} onChange={handleChange} />
                                 </div>
 
                                 <button type="submit" className="btn-primary apply__submit">
