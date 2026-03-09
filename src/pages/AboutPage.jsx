@@ -83,31 +83,35 @@ const AboutPage = () => (
                         <p className="section-sub">
                             Our founders decided to fix that. By building a platform that connects partners to multiple delivery companies, we eliminated the single-company dependency and created a true professional ecosystem with real benefits, real support, and real growth.
                         </p>
-                        <div className="about-pg__partner-logos">
-                            <div className="about-pg__partner-track">
-                                {[
-                                    { name: 'Swiggy', src: '/logos/swiggy1.png' },
-                                    { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
-                                    { name: 'Zomato', src: '/logos/zomato.png' },
-                                    { name: 'Blinkit', src: '/logos/blinkit.png' },
-                                    { name: 'Zepto', src: '/logos/zepto.png' },
-                                    { name: 'Uber', src: '/logos/uber.png' },
-                                    { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
-                                    { name: 'Flipkart', src: '/logos/flipkart.png' }
-                                ].concat([
-                                    { name: 'Swiggy', src: '/logos/swiggy1.png' },
-                                    { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
-                                    { name: 'Zomato', src: '/logos/zomato.png' },
-                                    { name: 'Blinkit', src: '/logos/blinkit.png' },
-                                    { name: 'Zepto', src: '/logos/zepto.png' },
-                                    { name: 'Uber', src: '/logos/uber.png' },
-                                    { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
-                                    { name: 'Flipkart', src: '/logos/flipkart.png' }
-                                ]).map((b, i) => (
-                                    <span key={i} className="about__tag">
-                                        <img src={b.src} alt={b.name} className="about__tag-logo" />
-                                    </span>
-                                ))}
+
+                        <div className="about-pg__partners-container">
+                            <p className="about-pg__partners-label">Powering careers with industry leaders:</p>
+                            <div className="about-pg__partner-logos">
+                                <div className="about-pg__partner-track">
+                                    {[
+                                        { name: 'Swiggy', src: '/logos/swiggy1.png' },
+                                        { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
+                                        { name: 'Zomato', src: '/logos/zomato.png' },
+                                        { name: 'Blinkit', src: '/logos/blinkit.png' },
+                                        { name: 'Zepto', src: '/logos/zepto.png' },
+                                        { name: 'Uber', src: '/logos/uber.png' },
+                                        { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
+                                        { name: 'Flipkart', src: '/logos/flipkart.png' },
+                                        // Duplicate for seamless loop
+                                        { name: 'Swiggy', src: '/logos/swiggy1.png' },
+                                        { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
+                                        { name: 'Zomato', src: '/logos/zomato.png' },
+                                        { name: 'Blinkit', src: '/logos/blinkit.png' },
+                                        { name: 'Zepto', src: '/logos/zepto.png' },
+                                        { name: 'Uber', src: '/logos/uber.png' },
+                                        { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
+                                        { name: 'Flipkart', src: '/logos/flipkart.png' }
+                                    ].map((b, i) => (
+                                        <div key={i} className="about__tag">
+                                            <img src={b.src} alt={b.name} className="about__tag-logo" />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
