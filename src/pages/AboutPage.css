@@ -233,4 +233,22 @@
     .about-pg__values-grid {
         grid-template-columns: 1fr;
     }
+
+    .about-pg__mv-card {
+        padding: 24px;
+    }
+
+    .about-pg__mv-title {
+        font-size: 1.5rem;
+    }
+
+    .about__tag {
+        min-width: 130px;
+        padding: 12px 16px;
+        height: 64px;
+    }
+
+    .about-pg__value-card {
+        padding: 20px;
+    }
 }
