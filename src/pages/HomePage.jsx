@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import FAQAccordion from '../components/FAQAccordion';
 import Testimonials from '../components/Testimonials';
 import './HomePage.css';
 
@@ -177,7 +178,7 @@ const HomePage = () => (
         </section>
 
         {/* Simple Fast Partnership */}
-        <section className="home-steps section-alt">
+        <section className="home-steps section section-alt">
             <div className="container" style={{ textAlign: 'center' }}>
                 <h2 className="section-title">Simple, Fast & Effective <span className="gradient-text">Partnership</span></h2>
                 <p className="section-sub" style={{ margin: '16px auto 56px' }}>Follow these simple steps to join DropyHub and start earning fast.</p>
@@ -299,7 +300,102 @@ const HomePage = () => (
             </div>
         </section>
 
+        {/* Innovation & Technology */}
+        <section className="home-innovation section section-alt">
+            <div className="container">
+                <div className="home-innovation__inner">
+                    <div className="home-innovation__content">
+                        <div className="section-tag">Innovation</div>
+                        <h2 className="section-title">Driven by <span className="gradient-text">Next-Gen Tech</span></h2>
+                        <p className="section-sub" style={{ margin: '16px 0 32px' }}>
+                            We leverage advanced AI and real-time logistics data to optimize every delivery route and maximize partner earnings.
+                        </p>
+
+                        <div className="innovation-features">
+                            <div className="innovation-feature">
+                                <div className="innovation-feature__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                </div>
+                                <div className="innovation-feature__text">
+                                    <h4>Smart Route Optimization</h4>
+                                    <p>AI-powered paths to ensure fastest deliveries with minimal fuel consumption.</p>
+                                </div>
+                            </div>
+                            <div className="innovation-feature">
+                                <div className="innovation-feature__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                </div>
+                                <div className="innovation-feature__text">
+                                    <h4>Real-Time Earnings Tracker</h4>
+                                    <p>Watch your earnings grow in real-time with instant performance analytics.</p>
+                                </div>
+                            </div>
+                            <div className="innovation-feature">
+                                <div className="innovation-feature__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                                </div>
+                                <div className="innovation-feature__text">
+                                    <h4>Unified Driver App</h4>
+                                    <p>One app for all your deliveries across multiple platform giants.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="home-innovation__visual">
+                        <div className="innovation-visual__glow" />
+                        <div className="innovation-visual__card">
+                            <img src="/app_mockup.png" alt="DropyHub App Interface" className="innovation-visual__img" />
+                            <div className="innovation-visual__float">
+                                <div style={{ fontSize: '11px', color: 'var(--cyan)', fontWeight: '700', textTransform: 'uppercase' }}>System Status</div>
+                                <div style={{ fontSize: '14px', fontWeight: '800', display: 'flex', alignItems: 'center', gap: '8px', marginTop: '4px' }}>
+                                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#4CAF50', boxShadow: '0 0 10px #4CAF50' }}></span>
+                                    Optimizing Routes...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Safety & Support */}
+        <section className="home-safety section">
+            <div className="container" style={{ textAlign: 'center' }}>
+                <div className="section-tag">Safety First</div>
+                <h2 className="section-title">Your Security, <span className="gradient-text">Our Priority</span></h2>
+                <p className="section-sub" style={{ margin: '16px auto 56px', maxWidth: '700px' }}>
+                    We go above and beyond to ensure every partner feels safe and supported throughout their journey with us.
+                </p>
+
+                <div className="home-safety__grid">
+                    <div className="safety-card glass-card">
+                        <div className="safety-card__icon" style={{ color: '#4CAF50' }}>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Comprehensive Insurance</h3>
+                        <p>Total accidental insurance coverage for all active partners from day one.</p>
+                    </div>
+                    <div className="safety-card glass-card">
+                        <div className="safety-card__icon" style={{ color: '#E91E63' }}>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <h3>24/7 SOS Support</h3>
+                        <p>Dedicated emergency response team available through our app for any situation.</p>
+                    </div>
+                    <div className="safety-card glass-card">
+                        <div className="safety-card__icon" style={{ color: '#FF9800' }}>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                        </div>
+                        <h3>Verified Partners</h3>
+                        <p>Stringent background checks for every rider to maintain a trusted ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <Testimonials />
+
+        <FAQAccordion />
 
         {/* Bottom CTA banner */}
         <section className="home-cta section-alt" style={{ padding: '72px 0' }}>

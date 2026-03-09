@@ -33,6 +33,7 @@ const Footer = () => (
                 <div className="footer__col">
                     <div className="footer__col-title">Company</div>
                     <Link to="/about" className="footer__link">About Us</Link>
+                    <Link to="/warehouse" className="footer__link">Warehouse</Link>
                     <Link to="/services" className="footer__link">Our Services</Link>
                     <Link to="/services#how-it-works" className="footer__link">How It Works</Link>
                     <Link to="/benefits" className="footer__link">Career Development</Link>
