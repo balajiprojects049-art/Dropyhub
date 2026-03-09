@@ -16,7 +16,7 @@ const Hero = () => {
                     {/* SRH Badge */}
                     <div className="hero__srh-badge">
                         <div className="srh-badge__dot" />
-                        <span>🏏 Official Partner — Sunrisers Hyderabad · IPL 2025</span>
+                        <span>🏏 Official Partner — Sunrisers Hyderabad · IPL 2026</span>
                     </div>
 
                     <h1 className="hero__headline">

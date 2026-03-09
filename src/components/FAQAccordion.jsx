@@ -100,31 +100,33 @@ const FAQAccordion = ({ single = true }) => {
   };
 
   return (
-    <section className="faq-accordion container">
-      <div className="faq-header">
-        <div className="section-tag">FAQ</div>
-        <h2 className="section-title"><span className="gradient-text">Common</span> Questions</h2>
-        <p className="section-sub">Quick answers to common questions — tap to expand.</p>
-      </div>
+    <section className="faq-accordion section">
+      <div className="container">
+        <div className="faq-header">
+          <div className="section-tag">FAQ</div>
+          <h2 className="section-title"><span className="gradient-text">Common</span> Questions</h2>
+          <p className="section-sub" style={{ margin: '12px auto 0', textAlign: 'center' }}>Quick answers to common questions — tap to expand.</p>
+        </div>
 
-      <div className="faq-list">
-        {faqs.map((f, i) => (
-          <div key={i} className="faq-wrap">
-            <button
-              ref={el => headerRefs.current[i] = el}
-              onKeyDown={(e) => onKeyDown(e, i)}
-              className="sr-only-focus"
-              aria-hidden
-              style={{ display: 'none' }}
-            />
-            <FAQItem id={i} q={f.q} a={f.a} open={single ? openIndex === i : (Array.isArray(openIndex) && openIndex.includes(i))} onToggle={toggle} />
-          </div>
-        ))}
-      </div>
+        <div className="faq-list">
+          {faqs.map((f, i) => (
+            <div key={i} className="faq-wrap">
+              <button
+                ref={el => headerRefs.current[i] = el}
+                onKeyDown={(e) => onKeyDown(e, i)}
+                className="sr-only-focus"
+                aria-hidden
+                style={{ display: 'none' }}
+              />
+              <FAQItem id={i} q={f.q} a={f.a} open={single ? openIndex === i : (Array.isArray(openIndex) && openIndex.includes(i))} onToggle={toggle} />
+            </div>
+          ))}
+        </div>
 
-      <div className="faq-controls">
-        <button className="btn-outline" onClick={() => setOpenIndex(faqs.map((_, i) => i))}>Expand all</button>
-        <button className="btn-outline" onClick={() => setOpenIndex(null)} style={{ marginLeft: '12px' }}>Collapse all</button>
+        <div className="faq-controls">
+          <button className="btn-outline" onClick={() => setOpenIndex(faqs.map((_, i) => i))}>Expand all</button>
+          <button className="btn-outline" onClick={() => setOpenIndex(null)} style={{ marginLeft: '12px' }}>Collapse all</button>
+        </div>
       </div>
     </section>
   );
