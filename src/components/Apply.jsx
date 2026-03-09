@@ -9,6 +9,8 @@ const Apply = () => {
         preferredCompany: [], jobType: [], experience: '', employmentStatus: '', message: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState('');
 
     const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -25,9 +27,35 @@ const Apply = () => {
         });
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
-        setSubmitted(true);
+        setIsSubmitting(true);
+        setSubmitError('');
+
+        try {
+            const response = await fetch('/api/apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setSubmitted(true);
+                setForm({
+                    name: '', phone: '', email: '', city: '', area: '', age: '',
+                    hasBike: '', bikeModel: '', bikeReg: '', drivingLicense: '',
+                    preferredCompany: [], jobType: [], experience: '', employmentStatus: '', message: ''
+                });
+            } else {
+                setSubmitError(result.message || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            setSubmitError('Failed to connect to the server. Please check your connection.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const COMPANY_OPTIONS = ['Swiggy', 'Zepto', 'Amazon', 'Flipkart', 'Rapido', 'Blinkit', 'Swiggy Instamart', 'Other'];
@@ -234,9 +262,15 @@ const Apply = () => {
                                     <textarea name="message" rows="3" placeholder="Any other details you want to share..." value={form.message} onChange={handleChange} />
                                 </div>
 
-                                <button type="submit" className="btn-primary apply__submit">
-                                    Apply Now — It's Completely Free
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                                {submitError && (
+                                    <div className="apply__error-message" style={{ color: '#D81B60', fontSize: '13.5px', marginTop: '10px', textAlign: 'center', background: 'rgba(216, 27, 96, 0.1)', padding: '10px', borderRadius: '8px' }}>
+                                        {submitError}
+                                    </div>
+                                )}
+
+                                <button type="submit" className="btn-primary apply__submit" disabled={isSubmitting}>
+                                    {isSubmitting ? 'Submitting Application...' : 'Apply Now — It\'s Completely Free'}
+                                    {!isSubmitting && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
                                 </button>
                                 <p className="apply__disclaimer">By applying, you agree to our Privacy Policy. We will never share your details.</p>
                             </form>
