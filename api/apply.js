@@ -14,13 +14,13 @@ export default async function handler(req, res) {
             port: process.env.SMTP_PORT || 465,
             secure: true, // true for 465, false for other ports
             auth: {
-                user: process.env.SMTP_USER || 'office@dropyhub.com',
+                user: process.env.SMTP_USER || 'delivery@dropyhub.com',
                 pass: process.env.SMTP_PASS,
             },
         });
 
         const mailOptions = {
-            from: `DropyHub Website <${process.env.SMTP_USER}>`,
+            from: `DropyHub Website <${process.env.SMTP_USER || 'delivery@dropyhub.com'}>`,
             to: 'delivery@dropyhub.com',                     // The destination address you requested
             subject: `New Delivery Exec Application: ${data.name}`,
             html: `
