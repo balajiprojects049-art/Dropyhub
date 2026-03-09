@@ -59,15 +59,23 @@
 }
 
 /* Force light mode links to be white while at the top of the dark image */
-[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link {
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+@media (min-width: 961px) {
+    [data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link {
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    [data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
 }
 
-[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.2);
+/* Ensure hamburger icon is white and visible when at top of page in light mode */
+[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__hamburger span {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .navbar__link--active {
@@ -217,10 +225,15 @@
         background: var(--navbar-bg);
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
-        border-bottom: 1px solid var(--border);
-        padding: 16px;
-        gap: 4px;
+        border-bottom: 1px solid var(--navbar-border);
+        padding: 20px 24px 32px;
+        gap: 8px;
         align-items: stretch;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    [data-theme="light"] .navbar__links {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
     .navbar__links--open {
@@ -228,12 +241,22 @@
     }
 
     .navbar__link {
-        text-align: center;
+        text-align: left;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-size: 16px;
+    }
+
+    .navbar__link:hover {
+        background: rgba(194, 24, 91, 0.05);
     }
 
     .navbar__cta {
         width: 100%;
         justify-content: center;
         margin-left: 0;
+        margin-top: 16px;
+        padding: 16px 24px;
+        font-size: 16px;
     }
 }

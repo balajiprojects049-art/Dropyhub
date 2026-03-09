@@ -67,7 +67,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+        <nav className={`navbar ${(scrolled || menuOpen) ? 'navbar--scrolled' : ''}`}>
             <div className="navbar__inner container">
                 <Link to="/" className="navbar__logo">
                     <img src="/logo.png" alt="DropyHub Logo" />

@@ -252,12 +252,14 @@ const HomePage = () => (
         <section className="home-partners section-alt" style={{ padding: '48px 0', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
             <div className="container">
                 <p className="home-partners__label">Connecting you with India's top delivery platforms</p>
-                <div className="home-partners__track">
-                    {[...partners, ...partners].map((p, i) => (
-                        <div key={i} className="home-partners__item">
-                            <img src={p.src} alt={p.name} className="home-partners__logo" />
-                        </div>
-                    ))}
+                <div className="home-partners__logos-wrapper">
+                    <div className="home-partners__track">
+                        {[...partners, ...partners].map((p, i) => (
+                            <div key={i} className="home-partners__item">
+                                <img src={p.src} alt={p.name} className="home-partners__logo" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
