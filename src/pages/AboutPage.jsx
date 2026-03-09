@@ -7,8 +7,8 @@ const milestones = [
     { year: '2023', event: 'DropyHub Founded in Hyderabad with a vision to empower delivery executives' },
     { year: '2024', event: 'Expanded to 12+ cities across South India with 3,000+ active delivery partners' },
     { year: '2024', event: 'Launched Vehicle Rental Programme and Financial Loan Services' },
-    { year: '2025', event: 'Official Partnership with Sunrisers Hyderabad for IPL 2025' },
-    { year: '2025', event: 'Launched IT Training Programme for career transition pathways' },
+    { year: '2026', event: 'Official Partnership with Sunrisers Hyderabad for IPL 2026' },
+    { year: '2026', event: 'Launched IT Training Programme for career transition pathways' },
 ];
 
 const values = [
