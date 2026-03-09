@@ -148,8 +148,8 @@
 
 [data-theme="light"] .page-hero__bg-overlay {
     background: transparent;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
 }
 
 .page-hero--has-bg {
