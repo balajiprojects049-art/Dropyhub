@@ -56,25 +56,27 @@ const Testimonials = () => (
                 </p>
             </div>
 
-            <div className="testimonials__grid">
-                {testimonials.map(t => (
-                    <div key={t.name} className="testimonials__card glass-card">
-                        <div className="test__quote">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                            </svg>
-                        </div>
-                        <Stars count={t.rating} />
-                        <p className="test__text">{t.text}</p>
-                        <div className="test__author">
-                            <div className="test__avatar">{t.avatar}</div>
-                            <div>
-                                <div className="test__name">{t.name}</div>
-                                <div className="test__role">{t.role}</div>
+            <div className="testimonials__marquee">
+                <div className="testimonials__track">
+                    {[...testimonials, ...testimonials].map((t, idx) => (
+                        <div key={`${t.name}-${idx}`} className="testimonials__card glass-card">
+                            <div className="test__quote">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                </svg>
+                            </div>
+                            <Stars count={t.rating} />
+                            <p className="test__text">{t.text}</p>
+                            <div className="test__author">
+                                <div className="test__avatar">{t.avatar}</div>
+                                <div>
+                                    <div className="test__name">{t.name}</div>
+                                    <div className="test__role">{t.role}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     </section>

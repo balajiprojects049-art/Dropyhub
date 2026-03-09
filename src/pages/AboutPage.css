@@ -59,26 +59,55 @@
 }
 
 .about-pg__partner-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    overflow: hidden;
     margin-top: 28px;
+    mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.about-pg__partner-track {
+    display: flex;
+    gap: 16px;
+    width: fit-content;
+    animation: marquee-about 20s linear infinite;
+}
+
+.about-pg__partner-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-about {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 8px));
+    }
 }
 
 .about__tag {
-    padding: 6px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 100px;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--text-secondary);
+    border-radius: 12px;
     transition: var(--transition);
+    height: 80px;
+    min-width: 160px;
+}
+
+.about__tag-logo {
+    height: 100%;
+    width: auto;
+    max-height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .about__tag:hover {
     border-color: var(--pink);
-    color: var(--pink-light);
 }
 
 /* Timeline */

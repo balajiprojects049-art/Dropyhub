@@ -1,45 +1,50 @@
 .services__header {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 64px;
 }
 
 .services__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 32px;
 }
 
 .services__card {
-    padding: 28px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    transition: var(--transition);
+    gap: 14px;
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.24s;
     cursor: default;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
 }
 
 .services__card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(216, 27, 96, 0.4);
-    box-shadow: 0 16px 48px rgba(216, 27, 96, 0.15);
+    transform: translateY(-10px);
+    border-color: rgba(216, 27, 96, 0.36);
+    box-shadow: 0 30px 80px rgba(2,6,23,0.55), 0 10px 36px rgba(216,27,96,0.08);
 }
 
 .services__icon {
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, rgba(216, 27, 96, 0.15), rgba(21, 101, 192, 0.15));
-    border: 1px solid rgba(216, 27, 96, 0.25);
-    border-radius: 14px;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(216, 27, 96, 0.18), rgba(21, 101, 192, 0.15));
+    border: 1px solid rgba(216, 27, 96, 0.22);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--pink-light);
-    transition: var(--transition);
+    transition: transform 0.22s ease, background 0.22s ease, color 0.18s;
 }
 
 .services__card:hover .services__icon {
-    background: linear-gradient(135deg, rgba(216, 27, 96, 0.3), rgba(21, 101, 192, 0.2));
+    background: linear-gradient(135deg, rgba(216, 27, 96, 0.34), rgba(21, 101, 192, 0.22));
     color: #fff;
+    transform: translateY(-4px) scale(1.02);
 }
 
 .services__tag {
@@ -56,7 +61,7 @@
 .services__title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
     font-family: 'Space Grotesk', sans-serif;
 }
 

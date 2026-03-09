@@ -47,7 +47,7 @@
 .how__step-title {
     font-size: 1rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -79,7 +79,7 @@
 .how__cta-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
     font-family: 'Space Grotesk', sans-serif;
     margin-bottom: 4px;
 }

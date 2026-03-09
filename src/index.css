@@ -107,6 +107,33 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Accessibility: focus-visible outlines for keyboard users */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(216,27,96,0.16);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h1,
 h2,
 h3,
@@ -147,9 +174,9 @@ img {
 
 /* --------------- Utility Classes --------------- */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
 }
 
 .section {
@@ -200,57 +227,61 @@ img {
   line-height: 1.7;
 }
 
+/* primary button base removed (replaced by enhanced styles below) */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
+  gap: 10px;
+  padding: 16px 36px;
   background: var(--gradient-pink);
   color: #fff;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 16px;
   border: none;
-  border-radius: 100px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(216, 27, 96, 0.4);
-  letter-spacing: 0.3px;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.28s;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.28), 0 4px 18px rgba(216,27,96,0.18);
+  letter-spacing: 0.4px;
 }
-
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(216, 27, 96, 0.6);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 18px 60px rgba(216,27,96,0.18), 0 8px 30px rgba(0,0,0,0.32);
 }
-
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 13px 32px;
+  gap: 10px;
+  padding: 10px 18px;
   background: transparent;
   color: var(--text-primary);
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 14px;
   border: 1.5px solid var(--border);
-  border-radius: 100px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.22s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
+.btn-outline:focus-visible {
+  outline: 3px solid rgba(216,27,96,0.12);
+  outline-offset: 4px;
+}
 .btn-outline:hover {
   border-color: var(--pink);
-  background: rgba(194, 24, 91, 0.06);
-  transform: translateY(-2px);
+  background: linear-gradient(180deg, rgba(194,24,91,0.06), rgba(21,101,192,0.02));
+  transform: translateY(-3px);
 }
 
 /* ----------- Glass Card ----------- */
 .glass-card {
   background: var(--glass-bg);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.32s cubic-bezier(0.2,0.9,0.2,1), box-shadow 0.32s;
 }
 
 [data-theme="light"] .glass-card {
@@ -259,7 +290,8 @@ img {
 
 .glass-card:hover {
   border-color: var(--border-glow);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-glow), 0 20px 60px rgba(2,6,23,0.5);
+  transform: translateY(-6px);
 }
 
 /* ----------- Divider Glow ----------- */

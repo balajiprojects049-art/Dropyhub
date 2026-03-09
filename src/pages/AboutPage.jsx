@@ -42,6 +42,7 @@ const AboutPage = () => (
             highlight="DropyHub"
             subtitle="We are on a mission to revolutionize the delivery industry by empowering executives with stable income, professional growth, and a community that genuinely cares."
             breadcrumb={['Home', 'About Us']}
+            imageSrc="/about_hero.png"
         />
 
         {/* Mission & Vision */}
@@ -83,9 +84,31 @@ const AboutPage = () => (
                             Our founders decided to fix that. By building a platform that connects partners to multiple delivery companies, we eliminated the single-company dependency and created a true professional ecosystem with real benefits, real support, and real growth.
                         </p>
                         <div className="about-pg__partner-logos">
-                            {['Swiggy', 'Zomato', 'Amazon', 'Blinkit', 'Zepto', 'Uber', 'Meesho'].map(b => (
-                                <span key={b} className="about__tag">{b}</span>
-                            ))}
+                            <div className="about-pg__partner-track">
+                                {[
+                                    { name: 'Swiggy', src: '/logos/swiggy1.png' },
+                                    { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
+                                    { name: 'Zomato', src: '/logos/zomato.png' },
+                                    { name: 'Blinkit', src: '/logos/blinkit.png' },
+                                    { name: 'Zepto', src: '/logos/zepto.png' },
+                                    { name: 'Uber', src: '/logos/uber.png' },
+                                    { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
+                                    { name: 'Flipkart', src: '/logos/flipkart.png' }
+                                ].concat([
+                                    { name: 'Swiggy', src: '/logos/swiggy1.png' },
+                                    { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
+                                    { name: 'Zomato', src: '/logos/zomato.png' },
+                                    { name: 'Blinkit', src: '/logos/blinkit.png' },
+                                    { name: 'Zepto', src: '/logos/zepto.png' },
+                                    { name: 'Uber', src: '/logos/uber.png' },
+                                    { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
+                                    { name: 'Flipkart', src: '/logos/flipkart.png' }
+                                ]).map((b, i) => (
+                                    <span key={i} className="about__tag">
+                                        <img src={b.src} alt={b.name} className="about__tag-logo" />
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div className="about-pg__timeline">

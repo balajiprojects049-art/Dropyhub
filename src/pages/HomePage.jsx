@@ -1,9 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import Testimonials from '../components/Testimonials';
 import './HomePage.css';
 
-const partners = ['Swiggy', 'Zomato', 'Amazon', 'Blinkit', 'Zepto', 'Uber', 'Meesho', 'Dunzo'];
+const partners = [
+    { name: 'Swiggy', src: '/logos/swiggy1.png' },
+    { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
+    { name: 'Zomato', src: '/logos/zomato.png' },
+    { name: 'Blinkit', src: '/logos/blinkit.png' },
+    { name: 'Zepto', src: '/logos/zepto.png' },
+    { name: 'Uber', src: '/logos/uber.png' },
+    { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
+    { name: 'Flipkart', src: '/logos/flipkart.png' }
+];
 
 const quickStats = [
     {
@@ -103,13 +113,150 @@ const HomePage = () => (
             </div>
         </section>
 
+        {/* Why People Choose Us */}
+        <section className="home-choose section">
+            <div className="container">
+                <div className="home-choose__inner">
+                    <div className="home-choose__image-col">
+                        <img src="/delivery_partner_real.png" alt="Happy DropyHub Delivery Partner" className="home-choose__img" />
+
+                        {/* Overlay floating cards */}
+                        <div className="home-choose__float-card home-choose__float-card--top glass-card">
+                            <div className="float-card__label">Earnings This Month</div>
+                            <div className="float-card__val">₹38,500 <span className="float-card__trend">↑ 14%</span></div>
+                        </div>
+
+                        <div className="home-choose__float-card home-choose__float-card--bottom glass-card">
+                            <div className="float-card__icon">5k+</div>
+                            <div className="float-card__text">
+                                <strong>Active Partners</strong>
+                                <span>Across India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="home-choose__content">
+                        <h2 className="section-title">Why People <span className="gradient-text">Choose us?</span></h2>
+                        <p className="section-sub" style={{ margin: '12px 0 40px' }}>
+                            Trusted by thousands of delivery partners — see what makes us different.
+                        </p>
+
+                        <div className="home-choose__list">
+                            <div className="home-choose__item glass-card">
+                                <div className="home-choose__icon" style={{ color: '#FFB74D', borderColor: 'rgba(255, 183, 77, 0.3)' }}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                                </div>
+                                <div className="home-choose__text">
+                                    <h3 className="home-choose__item-title">Affordable EV Rentals & Hostel Options</h3>
+                                    <p className="home-choose__item-desc">No bike? No problem. Get affordable EV rentals and access budget-friendly hostel accommodations.</p>
+                                </div>
+                            </div>
+
+                            <div className="home-choose__item glass-card">
+                                <div className="home-choose__icon" style={{ color: '#FF6B00', borderColor: 'rgba(255, 107, 0, 0.3)' }}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                </div>
+                                <div className="home-choose__text">
+                                    <h3 className="home-choose__item-title">Fast Onboarding & Zero Registration Fee</h3>
+                                    <p className="home-choose__item-desc">Join in just 24–48 hours with no upfront cost. We make it easy to start earning without delays.</p>
+                                </div>
+                            </div>
+
+                            <div className="home-choose__item glass-card">
+                                <div className="home-choose__icon" style={{ color: '#FFD54F', borderColor: 'rgba(255, 213, 79, 0.3)' }}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>
+                                </div>
+                                <div className="home-choose__text">
+                                    <h3 className="home-choose__item-title">Weekly Rewards & Career Growth Opportunities</h3>
+                                    <p className="home-choose__item-desc">Earn bonuses, get vouchers, and even switch to a tech career with our free training program.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Simple Fast Partnership */}
+        <section className="home-steps section-alt">
+            <div className="container" style={{ textAlign: 'center' }}>
+                <h2 className="section-title">Simple, Fast & Effective <span className="gradient-text">Partnership</span></h2>
+                <p className="section-sub" style={{ margin: '16px auto 56px' }}>Follow these simple steps to join DropyHub and start earning fast.</p>
+
+                <div className="home-steps__grid">
+                    <div className="home-steps__line"></div>
+
+                    <div className="home-steps__item">
+                        <div className="home-steps__icon glass-card" style={{ borderColor: 'rgba(30,136,229,0.3)', color: '#1E88E5' }}>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                        </div>
+                        <h3 className="home-steps__title">Submit Your<br />Requirements</h3>
+                        <p className="home-steps__desc">Tell us your fleet needs, timing, and locations.</p>
+                    </div>
+
+                    <div className="home-steps__item">
+                        <div className="home-steps__icon glass-card" style={{ borderColor: 'rgba(76,175,80,0.3)', color: '#4CAF50' }}>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                        </div>
+                        <h3 className="home-steps__title">Get Matched<br />with Trained Riders</h3>
+                        <p className="home-steps__desc">We assign verified partners within 24–72 hours.</p>
+                    </div>
+
+                    <div className="home-steps__item">
+                        <div className="home-steps__icon glass-card" style={{ borderColor: 'rgba(171,71,188,0.3)', color: '#AB47BC' }}>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
+                        </div>
+                        <h3 className="home-steps__title">Start Delivering<br />Seamlessly</h3>
+                        <p className="home-steps__desc">Track performance and scale as needed — no long-term contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Why Companies Choose */}
+        <section className="home-b2b section">
+            <div className="container">
+                <h2 className="section-title">Why Leading Companies Choose <span className="gradient-text">DropyHub</span></h2>
+                <p className="section-sub" style={{ margin: '16px 0 48px', maxWidth: '700px' }}>
+                    We simplify workforce management by offering reliable, flexible delivery staffing solutions.
+                </p>
+
+                <div className="home-b2b__grid">
+                    <div className="home-b2b__card glass-card">
+                        <div className="home-b2b__icon">👨‍✈️</div>
+                        <h3 className="home-b2b__title">Skilled &<br />Verified Riders</h3>
+                        <p className="home-b2b__desc">Every rider is background-checked, trained, and ready to deliver.</p>
+                    </div>
+
+                    <div className="home-b2b__card glass-card">
+                        <div className="home-b2b__icon">📉</div>
+                        <h3 className="home-b2b__title">Low<br />Attrition Rates</h3>
+                        <p className="home-b2b__desc">DropyHub's reward systems and rider support reduce turnover.</p>
+                    </div>
+
+                    <div className="home-b2b__card glass-card">
+                        <div className="home-b2b__icon">🗺️</div>
+                        <h3 className="home-b2b__title">Pan-India<br />Reach</h3>
+                        <p className="home-b2b__desc">Operates in 7+ cities, covering major delivery zones.</p>
+                    </div>
+
+                    <div className="home-b2b__card glass-card">
+                        <div className="home-b2b__icon">🤝</div>
+                        <h3 className="home-b2b__title">Rider Management<br />Support</h3>
+                        <p className="home-b2b__desc">Help you track and support your riders so you can focus on business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         {/* Partners marquee strip */}
         <section className="home-partners section-alt" style={{ padding: '48px 0', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
             <div className="container">
                 <p className="home-partners__label">Connecting you with India's top delivery platforms</p>
                 <div className="home-partners__track">
                     {[...partners, ...partners].map((p, i) => (
-                        <div key={i} className="home-partners__item">{p}</div>
+                        <div key={i} className="home-partners__item">
+                            <img src={p.src} alt={p.name} className="home-partners__logo" />
+                        </div>
                     ))}
                 </div>
             </div>
@@ -139,7 +286,7 @@ const HomePage = () => (
                     <div className="home-srh-teaser__right">
                         <div className="home-srh-logo-ring">
                             <div className="home-srh-logo-inner">
-                                <img src="/logo.png" alt="DropyHub" />
+                                <img src="/srh_logo.png" alt="Sunrisers Hyderabad" />
                             </div>
                             <div className="home-srh-ring home-srh-ring--1" />
                             <div className="home-srh-ring home-srh-ring--2" />
@@ -149,6 +296,8 @@ const HomePage = () => (
                 </div>
             </div>
         </section>
+
+        <Testimonials />
 
         {/* Bottom CTA banner */}
         <section className="home-cta section-alt" style={{ padding: '72px 0' }}>

@@ -54,7 +54,7 @@ const SRH = () => (
                 <div className="srh__visual">
                     <div className="srh__logo-ring">
                         <div className="srh__logo-inner">
-                            <img src="/logo.png" alt="DropyHub" className="srh__dh-logo" />
+                            <img src="/srh_logo.png" alt="Sunrisers Hyderabad" className="srh__dh-logo" />
                         </div>
                         <div className="srh__ring srh__ring--1" />
                         <div className="srh__ring srh__ring--2" />

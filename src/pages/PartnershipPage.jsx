@@ -21,6 +21,7 @@ const PartnershipPage = () => (
             highlight="Sunrisers Hyderabad"
             subtitle="We are proud to be the Official Partner of Sunrisers Hyderabad for IPL 2025 — a partnership built on performance, excellence, and the winning spirit."
             breadcrumb={['Home', 'Partnership']}
+            imageSrc="/partnership_hero.png"
         />
 
         {/* Orange partnership banner */}
@@ -40,7 +41,7 @@ const PartnershipPage = () => (
                 <div className="partner-banner__logo-wrap">
                     <img src="/logo.png" alt="DropyHub" className="partner-banner__dh-logo" />
                     <div className="partner-banner__times">×</div>
-                    <div className="partner-banner__srh-badge">SRH<br /><span>IPL 2025</span></div>
+                    <img src="/srh_logo.png" alt="Sunrisers Hyderabad" className="partner-banner__srh-logo" />
                 </div>
             </div>
         </div>

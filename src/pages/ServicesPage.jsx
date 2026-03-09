@@ -12,6 +12,7 @@ const ServicesPage = () => (
             highlight="Services"
             subtitle="From financial loans and vehicle rentals to career training and bonus programmes — DropyHub is your complete professional support system."
             breadcrumb={['Home', 'Services']}
+            imageSrc="/services_hero.png"
         />
         <Services />
         <HowItWorks />

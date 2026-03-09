@@ -20,36 +20,54 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 20px;
 }
 
 .navbar__logo img {
-    height: 48px;
+    height: 56px;
     object-fit: contain;
 }
 
 .navbar__links {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 16px;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .navbar__link {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--text-secondary);
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    letter-spacing: 0.2px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: all 0.22s ease;
+    letter-spacing: 0.3px;
     border: 1px solid transparent;
+}
+
+.navbar__link:focus-visible {
+    outline: 3px solid rgba(216, 27, 96, 0.12);
+    outline-offset: 4px;
+    border-radius: 10px;
 }
 
 .navbar__link:hover {
     color: var(--text-primary);
     background: var(--surface);
+}
+
+/* Force light mode links to be white while at the top of the dark image */
+[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .navbar__link--active {

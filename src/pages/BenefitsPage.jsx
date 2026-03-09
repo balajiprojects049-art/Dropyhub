@@ -12,6 +12,7 @@ const BenefitsPage = () => (
             highlight="Well-being"
             subtitle="Salary, bonuses, insurance, safety gear, IT training, and a 24/7 helpdesk — DropyHub partners get the full package."
             breadcrumb={['Home', 'Benefits']}
+            imageSrc="/benefits_hero.png"
         />
         <Benefits />
         <Testimonials />
