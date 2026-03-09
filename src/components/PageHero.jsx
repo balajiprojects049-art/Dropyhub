@@ -1,11 +1,14 @@
 import React from 'react';
 import './PageHero.css';
 
-const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc }) => (
+const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, imageLightSrc }) => (
     <div className={`page-hero ${imageSrc ? 'page-hero--has-bg' : ''}`}>
         {imageSrc && (
             <div className="page-hero__bg-layer">
-                <img src={imageSrc} alt="" className="page-hero__bg-img" />
+                <img src={imageSrc} alt="" className={`page-hero__bg-img ${imageLightSrc ? 'page-hero__bg-img--dark' : ''}`} />
+                {imageLightSrc && (
+                    <img src={imageLightSrc} alt="" className="page-hero__bg-img page-hero__bg-img--light" />
+                )}
                 <div className="page-hero__bg-overlay" />
             </div>
         )}

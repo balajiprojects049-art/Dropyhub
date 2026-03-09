@@ -37,12 +37,12 @@ const values = [
 const AboutPage = () => (
     <>
         <PageHero
-            tag="Our Story"
-            title="About"
-            highlight="DropyHub"
-            subtitle="We are on a mission to revolutionize the delivery industry by empowering executives with stable income, professional growth, and a community that genuinely cares."
+            tag="About DropyHub"
+            title="Logistics Reimagined."
+            subtitle="We are building India's most reliable, empowering, and scalable delivery network from the ground up."
             breadcrumb={['Home', 'About Us']}
             imageSrc="/about_hero.png"
+            imageLightSrc="/about_hero_light.png"
         />
 
         {/* Mission & Vision */}

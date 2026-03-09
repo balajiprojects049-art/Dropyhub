@@ -7,12 +7,13 @@ import HowItWorks from '../components/HowItWorks';
 const ServicesPage = () => (
     <>
         <PageHero
-            tag="What We Offer"
-            title="Our"
-            highlight="Services"
-            subtitle="From financial loans and vehicle rentals to career training and bonus programmes — DropyHub is your complete professional support system."
+            tag="Our Services"
+            title="Built for Speed."
+            highlight="Driven by Reliability."
+            subtitle="From hyper-local superfast deliveries to large-scale enterprise logistics, we tailor our solutions to your every need."
             breadcrumb={['Home', 'Services']}
             imageSrc="/services_hero.png"
+            imageLightSrc="/services_hero_light.png"
         />
         <Services />
         <HowItWorks />

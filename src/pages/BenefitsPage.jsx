@@ -8,11 +8,12 @@ const BenefitsPage = () => (
     <>
         <PageHero
             tag="Partner Benefits"
-            title="Built for Your"
-            highlight="Well-being"
-            subtitle="Salary, bonuses, insurance, safety gear, IT training, and a 24/7 helpdesk — DropyHub partners get the full package."
+            title="Grow With Us,"
+            highlight="Earn With Pride."
+            subtitle="We treat our delivery executives as true partners, offering the industry's best benefits, flexibility, and financial security."
             breadcrumb={['Home', 'Benefits']}
             imageSrc="/benefits_hero.png"
+            imageLightSrc="/benefits_hero_light.png"
         />
         <Benefits />
         <Testimonials />
