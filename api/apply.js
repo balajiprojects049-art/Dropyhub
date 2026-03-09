@@ -15,7 +15,7 @@ export default async function handler(req, res) {
             secure: true, // true for 465, false for other ports
             auth: {
                 user: process.env.SMTP_USER || 'delivery@dropyhub.com',
-                pass: process.env.SMTP_PASS,
+                pass: process.env.SMTP_PASS || 'Dropy-HubDeliver',
             },
         });
 
