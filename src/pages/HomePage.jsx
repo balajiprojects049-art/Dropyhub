@@ -138,7 +138,7 @@ const HomePage = () => (
                     <div className="home-choose__content">
                         <h2 className="section-title">Why People <span className="gradient-text">Choose us?</span></h2>
                         <p className="section-sub" style={{ margin: '12px 0 40px' }}>
-                            Trusted by thousands of delivery partners — see what makes us different.
+                            Trusted by thousands of delivery partners - see what makes us different.
                         </p>
 
                         <div className="home-choose__list">
@@ -158,7 +158,7 @@ const HomePage = () => (
                                 </div>
                                 <div className="home-choose__text">
                                     <h3 className="home-choose__item-title">Fast Onboarding & Zero Registration Fee</h3>
-                                    <p className="home-choose__item-desc">Join in just 24–48 hours with no upfront cost. We make it easy to start earning without delays.</p>
+                                    <p className="home-choose__item-desc">Join in just 24-48 hours with no upfront cost. We make it easy to start earning without delays.</p>
                                 </div>
                             </div>
 
@@ -199,7 +199,7 @@ const HomePage = () => (
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                         </div>
                         <h3 className="home-steps__title">Get Matched<br />with Trained Riders</h3>
-                        <p className="home-steps__desc">We assign verified partners within 24–72 hours.</p>
+                        <p className="home-steps__desc">We assign verified partners within 24-72 hours.</p>
                     </div>
 
                     <div className="home-steps__item">
@@ -207,7 +207,7 @@ const HomePage = () => (
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
                         </div>
                         <h3 className="home-steps__title">Start Delivering<br />Seamlessly</h3>
-                        <p className="home-steps__desc">Track performance and scale as needed — no long-term contracts.</p>
+                        <p className="home-steps__desc">Track performance and scale as needed - no long-term contracts.</p>
                     </div>
                 </div>
             </div>
@@ -279,7 +279,7 @@ const HomePage = () => (
                             DropyHub × <span className="gradient-text">Sunrisers Hyderabad</span>
                         </h2>
                         <p className="home-srh-teaser__desc">
-                            We are the Official Partner of SRH for IPL 2026. This landmark partnership reflects our commitment to performance, excellence, and winning — for our partners and for the game.
+                            We are the Official Partner of SRH for IPL 2026. This landmark partnership reflects our commitment to performance, excellence, and winning - for our partners and for the game.
                         </p>
                         <Link to="/partnership" className="btn-primary">
                             Explore Partnership
@@ -406,7 +406,7 @@ const HomePage = () => (
                 </div>
                 <div className="home-cta__actions">
                     <Link to="/apply" className="btn-primary">
-                        Apply Now — ₹0 Fee
+                        Apply Now - ₹0 Fee
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                     </Link>
                     <Link to="/about" className="btn-outline">Know More</Link>

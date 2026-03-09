@@ -9,7 +9,7 @@ const highlights = [
     { icon: '🎟️', title: 'Match Ticket Rewards', desc: 'Top-performing delivery partners are rewarded with exclusive SRH match tickets as part of our incentive programme.' },
     { icon: '🧢', title: 'Branded Merchandise', desc: 'Official SRH × DropyHub co-branded merchandise gifted to our star partners and during special campaigns.' },
     { icon: '📡', title: 'National Media Exposure', desc: 'The partnership receives national TV and digital media coverage during the IPL season, elevating the DropyHub brand.' },
-    { icon: '🤝', title: 'Community & Spirit', desc: 'We share the SRH spirit of teamwork, performance, and rising above challenges — just like our delivery partners.' },
+    { icon: '🤝', title: 'Community & Spirit', desc: 'We share the SRH spirit of teamwork, performance, and rising above challenges - just like our delivery partners.' },
     { icon: '🥇', title: 'Partner Recognition', desc: 'Monthly "Star Partner" awards have a special SRH edition during IPL season with exclusive prizes.' },
 ];
 
@@ -19,7 +19,7 @@ const PartnershipPage = () => (
             tag="IPL 2026 Partnership"
             title="DropyHub ×"
             highlight="Sunrisers Hyderabad"
-            subtitle="We are proud to be the Official Partner of Sunrisers Hyderabad for IPL 2026 — a partnership built on performance, excellence, and the winning spirit."
+            subtitle="We are proud to be the Official Partner of Sunrisers Hyderabad for IPL 2026 - a partnership built on performance, excellence, and the winning spirit."
             breadcrumb={['Home', 'Partnership']}
             imageSrc="/partnership_hero.png"
             imageLightSrc="/partnership_hero_light.png"
@@ -77,11 +77,11 @@ const PartnershipPage = () => (
             <div className="container" style={{ textAlign: 'center' }}>
                 <h2 className="section-title">Join the <span className="gradient-text">Winning Team</span></h2>
                 <p className="section-sub" style={{ margin: '16px auto 32px' }}>
-                    Be part of a platform associated with India's most exciting cricket franchise. Register as a delivery partner today — completely free.
+                    Be part of a platform associated with India's most exciting cricket franchise. Register as a delivery partner today - completely free.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <Link to="/apply" className="btn-primary">
-                        Apply Now — ₹0 Fee
+                        Apply Now - ₹0 Fee
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                     </Link>
                     <Link to="/benefits" className="btn-outline">View Benefits</Link>

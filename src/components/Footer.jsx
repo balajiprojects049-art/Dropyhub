@@ -13,7 +13,7 @@ const Footer = () => (
                         <img src="/logo.png" alt="DropyHub" className="footer__logo" />
                     </Link>
                     <p className="footer__tagline">
-                        India's premier delivery partner platform — empowering executives with zero registration fee, career growth, and financial support.
+                        India's premier delivery partner platform - empowering executives with zero registration fee, career growth, and financial support.
                     </p>
                     <div className="footer__socials">
                         {['instagram', 'twitter', 'linkedin', 'youtube'].map(s => (

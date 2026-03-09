@@ -8,7 +8,7 @@ const ApplyPage = () => (
     <>
         <PageHero
             tag="Join Us"
-            title="Apply Now —"
+            title="Apply Now -"
             highlight="It's Completely Free"
             subtitle="Register as a DropyHub delivery partner in under 5 minutes. No fee, no documents burden. Just your name, phone, and city. Start earning within 48 hours."
             breadcrumb={['Home', 'Apply Now']}

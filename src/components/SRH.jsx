@@ -22,7 +22,7 @@ const SRH = () => (
 
                     <p className="srh__desc">
                         DropyHub is proud to be the <strong>Official Partner of Sunrisers Hyderabad</strong> for
-                        IPL 2026. This partnership reflects our commitment to performance, teamwork, and winning —
+                        IPL 2026. This partnership reflects our commitment to performance, teamwork, and winning -
                         values that define both the SRH organization and every delivery partner in our network.
                     </p>
 

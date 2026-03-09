@@ -11,7 +11,7 @@ const services = [
         ),
         title: 'Financial Loans',
         tag: 'Up to ₹10 Lakh',
-        desc: 'Emergency or growth loans for personal needs, vehicle purchase, or operational requirements — without complex paperwork.',
+        desc: 'Emergency or growth loans for personal needs, vehicle purchase, or operational requirements - without complex paperwork.',
         highlight: 'Instant Approval',
     },
     {
@@ -57,7 +57,7 @@ const services = [
         ),
         title: 'Weekly Bonuses',
         tag: 'Performance Pay',
-        desc: 'Incentive-based bonus structure. The more you deliver, the more you earn — transparent and guaranteed.',
+        desc: 'Incentive-based bonus structure. The more you deliver, the more you earn - transparent and guaranteed.',
         highlight: 'Paid Every Week',
     },
     {
@@ -69,7 +69,7 @@ const services = [
         ),
         title: 'BookMyVouchers',
         tag: 'Exclusive Perks',
-        desc: 'Special purchasing vouchers and discount coupons redeemable at partner brands — adding real value beyond salary.',
+        desc: 'Special purchasing vouchers and discount coupons redeemable at partner brands - adding real value beyond salary.',
         highlight: 'Exclusive Access',
     },
 ];
@@ -84,7 +84,7 @@ const Services = () => (
                 </h2>
                 <div className="divider-glow" style={{ margin: '16px auto 0' }} />
                 <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>
-                    DropyHub provides end-to-end professional support — from your first day to your career peak.
+                    DropyHub provides end-to-end professional support - from your first day to your career peak.
                 </p>
             </div>
 

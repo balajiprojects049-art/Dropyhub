@@ -75,12 +75,12 @@ const Apply = () => {
                         <div className="divider-glow" />
                         <p className="section-sub" style={{ marginBottom: '32px' }}>
                             Register as a DropyHub delivery partner and unlock a world of earning potential, career support,
-                            and financial empowerment — at absolutely zero cost.
+                            and financial empowerment - at absolutely zero cost.
                         </p>
 
                         <div className="apply__benefits-list">
                             {[
-                                'Zero Registration Fee — Always',
+                                'Zero Registration Fee - Always',
                                 'Start Earning Within 48 Hours',
                                 'Multi-Platform Partner Access',
                                 'Insurance & Safety Gear Included',
@@ -125,7 +125,7 @@ const Apply = () => {
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="apply__form apply__form--long">
-                                <h3 className="apply__form-title">DropyHub – Delivery Executive Application Form</h3>
+                                <h3 className="apply__form-title">DropyHub - Delivery Executive Application Form</h3>
                                 <p className="apply__form-sub">Fill in your details and we'll get you started.</p>
 
                                 {/* 1. Full Name & 2. Mobile */}
@@ -241,8 +241,8 @@ const Apply = () => {
                                         <select name="experience" value={form.experience} onChange={handleChange} required>
                                             <option value="">Select...</option>
                                             <option value="Fresher">Fresher</option>
-                                            <option value="0-6 Months">0–6 Months</option>
-                                            <option value="6-12 Months">6–12 Months</option>
+                                            <option value="0-6 Months">0-6 Months</option>
+                                            <option value="6-12 Months">6-12 Months</option>
                                             <option value="1+ Year">1+ Year</option>
                                         </select>
                                     </div>
@@ -269,7 +269,7 @@ const Apply = () => {
                                 )}
 
                                 <button type="submit" className="btn-primary apply__submit" disabled={isSubmitting}>
-                                    {isSubmitting ? 'Submitting Application...' : 'Apply Now — It\'s Completely Free'}
+                                    {isSubmitting ? 'Submitting Application...' : 'Apply Now - It\'s Completely Free'}
                                     {!isSubmitting && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
                                 </button>
                                 <p className="apply__disclaimer">By applying, you agree to our Privacy Policy. We will never share your details.</p>

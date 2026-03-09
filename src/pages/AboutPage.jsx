@@ -25,7 +25,7 @@ const values = [
     {
         icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>,
         title: 'Growth',
-        desc: 'We invest in your career — from delivery to IT, we support every step.',
+        desc: 'We invest in your career - from delivery to IT, we support every step.',
     },
     {
         icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>,
@@ -56,7 +56,7 @@ const AboutPage = () => (
                         <div className="about-pg__mv-tag">Our Mission</div>
                         <h2 className="about-pg__mv-title">Empower Every<br /><span className="gradient-text">Delivery Executive</span></h2>
                         <p className="about-pg__mv-desc">
-                            To provide every delivery partner with the tools, financial support, and career development needed to build a stable, prosperous, and dignified livelihood — not just a job.
+                            To provide every delivery partner with the tools, financial support, and career development needed to build a stable, prosperous, and dignified livelihood - not just a job.
                         </p>
                     </div>
                     <div className="about-pg__mv-card glass-card">
@@ -66,7 +66,7 @@ const AboutPage = () => (
                         <div className="about-pg__mv-tag" style={{ color: 'var(--cyan)', background: 'rgba(21,101,192,0.1)', borderColor: 'rgba(21,101,192,0.3)' }}>Our Vision</div>
                         <h2 className="about-pg__mv-title">India's Leading<br /><span className="gradient-text">Logistics Network</span></h2>
                         <p className="about-pg__mv-desc">
-                            To become India's most trusted and comprehensive platform for delivery professionals — connecting partners to opportunities, companies, and careers across every major city.
+                            To become India's most trusted and comprehensive platform for delivery professionals - connecting partners to opportunities, companies, and careers across every major city.
                         </p>
                     </div>
                 </div>
@@ -75,10 +75,10 @@ const AboutPage = () => (
                 <div className="about-pg__story">
                     <div className="about-pg__story-content">
                         <div className="section-tag">The DropyHub Story</div>
-                        <h2 className="section-title">Built from the Ground Up — <span className="gradient-text">For Partners</span></h2>
+                        <h2 className="section-title">Built from the Ground Up - <span className="gradient-text">For Partners</span></h2>
                         <div className="divider-glow" />
                         <p className="section-sub" style={{ marginBottom: '20px' }}>
-                            DropyHub was born from a simple observation: delivery executives were working incredibly hard but were underserved — low pay, high stress, zero career mobility, and no financial safety net.
+                            DropyHub was born from a simple observation: delivery executives were working incredibly hard but were underserved - low pay, high stress, zero career mobility, and no financial safety net.
                         </p>
                         <p className="section-sub">
                             Our founders decided to fix that. By building a platform that connects partners to multiple delivery companies, we eliminated the single-company dependency and created a true professional ecosystem with real benefits, real support, and real growth.
@@ -158,7 +158,7 @@ const AboutPage = () => (
                 </p>
                 <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <Link to="/apply" className="btn-primary">
-                        Apply Now — Free
+                        Apply Now - Free
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                     </Link>
                     <Link to="/services" className="btn-outline">Explore Services</Link>

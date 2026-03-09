@@ -47,11 +47,11 @@ const About = () => {
 
                         <p className="section-sub" style={{ marginBottom: '24px' }}>
                             DropyHub is revolutionizing the delivery industry by creating a unified ecosystem where delivery
-                            executives are empowered — not just employed. We bridge the gap between gig work and professional careers.
+                            executives are empowered - not just employed. We bridge the gap between gig work and professional careers.
                         </p>
                         <p className="section-sub">
                             Founded with the mission to provide stable livelihoods and career pathways, DropyHub connects
-                            delivery partners to top companies like Swiggy, Zomato, Amazon, Blinkit &amp; Zepto —
+                            delivery partners to top companies like Swiggy, Zomato, Amazon, Blinkit &amp; Zepto -
                             all under one powerful platform.
                         </p>
 

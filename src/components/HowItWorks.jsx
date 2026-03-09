@@ -5,12 +5,12 @@ const steps = [
     {
         num: '01',
         title: 'Register for Free',
-        desc: 'Create your profile on DropyHub in under 5 minutes — no fee, no hassle, no documentation burden.',
+        desc: 'Create your profile on DropyHub in under 5 minutes - no fee, no hassle, no documentation burden.',
     },
     {
         num: '02',
         title: 'Choose Your Preference',
-        desc: 'Select your preferred delivery company, time slots, vehicle type, and work area — full flexibility.',
+        desc: 'Select your preferred delivery company, time slots, vehicle type, and work area - full flexibility.',
     },
     {
         num: '03',
@@ -34,7 +34,7 @@ const HowItWorks = () => (
                 </h2>
                 <div className="divider-glow" style={{ margin: '16px auto 0' }} />
                 <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>
-                    Four simple steps to change your career trajectory — starting today.
+                    Four simple steps to change your career trajectory - starting today.
                 </p>
             </div>
 

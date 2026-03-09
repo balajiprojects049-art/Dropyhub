@@ -16,7 +16,7 @@ const Hero = () => {
                     {/* SRH Badge */}
                     <div className="hero__srh-badge">
                         <div className="srh-badge__dot" />
-                        <span>🏏 Official Partner — Sunrisers Hyderabad · IPL 2026</span>
+                        <span>🏏 Official Partner - Sunrisers Hyderabad · IPL 2026</span>
                     </div>
 
                     <h1 className="hero__headline">
@@ -26,7 +26,7 @@ const Hero = () => {
 
                     <p className="hero__sub">
                         Join <strong>DropyHub</strong> and unlock stable income, career growth, vehicle support,
-                        financial loans &amp; more — all with <em>absolutely Zero Registration Fee.</em>
+                        financial loans &amp; more - all with <em>absolutely Zero Registration Fee.</em>
                     </p>
 
                     {/* Zero Fee Highlight */}

@@ -5,7 +5,7 @@ const benefits = [
     { icon: '💵', title: 'Competitive Salary', desc: 'Industry-benchmark pay with performance-linked top-ups. Your earnings grow as you do.' },
     { icon: '🏆', title: 'Monthly Awards', desc: 'Recognition-based monthly and annual awards for top-performing delivery executives.' },
     { icon: '🛡️', title: 'Full Insurance Coverage', desc: 'Comprehensive rider and vehicle insurance included from day one at zero extra cost.' },
-    { icon: '🎓', title: 'IT Skill Training', desc: 'Free certified courses in software, data entry, and IT operations — your bridge to a tech career.' },
+    { icon: '🎓', title: 'IT Skill Training', desc: 'Free certified courses in software, data entry, and IT operations - your bridge to a tech career.' },
     { icon: '⛑️', title: 'Safety Gear & Uniform', desc: 'Professional uniform, helmet, and full safety equipment provided and maintained by DropyHub.' },
     { icon: '📞', title: '24/7 Support Helpdesk', desc: 'Dedicated partner helpdesk available around the clock for any query, grievance, or emergency.' },
 ];
@@ -36,7 +36,7 @@ const Benefits = () => (
                 <div className="benefits__banner-orb" />
                 <div className="benefits__banner-content">
                     <div className="benefits__banner-label">Average Monthly Earnings</div>
-                    <div className="benefits__banner-amount">₹18,000 – ₹32,000</div>
+                    <div className="benefits__banner-amount">₹18,000 - ₹32,000</div>
                     <div className="benefits__banner-note">Base salary + bonuses + performance incentives</div>
                 </div>
                 <div className="benefits__banner-stats">

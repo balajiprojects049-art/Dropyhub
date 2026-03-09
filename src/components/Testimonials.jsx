@@ -27,7 +27,7 @@ const testimonials = [
         name: 'Praveen Reddy',
         role: 'Partner, Chennai',
         rating: 5,
-        text: 'The vehicle rental programme saved me from the burden of taking a loan from outside. Monthly maintenance is included — it is truly a complete package.',
+        text: 'The vehicle rental programme saved me from the burden of taking a loan from outside. Monthly maintenance is included - it is truly a complete package.',
         avatar: 'PR',
     },
 ];

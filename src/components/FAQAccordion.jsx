@@ -4,7 +4,7 @@ import './FAQAccordion.css';
 const faqs = [
   {
     q: 'Is registration really free?',
-    a: 'Yes. Always. There is no registration fee, no deposit, and no documentation charge — ever.'
+    a: 'Yes. Always. There is no registration fee, no deposit, and no documentation charge - ever.'
   },
   {
     q: 'How quickly can I start working?',
@@ -105,7 +105,7 @@ const FAQAccordion = ({ single = true }) => {
         <div className="faq-header">
           <div className="section-tag">FAQ</div>
           <h2 className="section-title"><span className="gradient-text">Common</span> Questions</h2>
-          <p className="section-sub" style={{ margin: '12px auto 0', textAlign: 'center' }}>Quick answers to common questions — tap to expand.</p>
+          <p className="section-sub" style={{ margin: '12px auto 0', textAlign: 'center' }}>Quick answers to common questions - tap to expand.</p>
         </div>
 
         <div className="faq-list">

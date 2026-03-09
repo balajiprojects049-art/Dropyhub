@@ -96,7 +96,7 @@ const Navbar = () => {
 
                     <li>
                         <Link to="/apply" className="btn-primary navbar__cta">
-                            Join Now — Free
+                            Join Now - Free
                         </Link>
                     </li>
                 </ul>
