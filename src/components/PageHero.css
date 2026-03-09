@@ -185,3 +185,25 @@
     color: #FFD54F;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
+
+/* Responsive */
+@media(max-width: 768px) {
+    .page-hero--has-bg {
+        padding: 160px 0 100px;
+        /* Reduce massive vertical height slightly on mobile */
+    }
+
+    .page-hero__bg-img--dark {
+        object-position: 70% center;
+        /* Keep subjects in frame on native portrait aspect ratios */
+    }
+
+    [data-theme="light"] .page-hero__bg-img--light {
+        object-position: 75% center;
+        /* Ensure AI subjects face inward or are visible */
+    }
+
+    .page-hero__title {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+    }
+}

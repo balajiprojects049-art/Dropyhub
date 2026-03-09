@@ -281,3 +281,24 @@
         padding-top: 40px;
     }
 }
+
+@media(max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        /* Leave space for mobile header */
+    }
+
+    .hero__bg-img--dark {
+        object-position: 65% 25%;
+        /* Keep main subjects in frame on vertical screens */
+    }
+
+    [data-theme="light"] .hero__bg-img--light {
+        object-position: 70% 30%;
+        /* Shift horizontal AI images to show subjects on mobile */
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+}
