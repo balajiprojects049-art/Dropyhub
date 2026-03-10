@@ -41,8 +41,8 @@ const AboutPage = () => (
             title="Logistics Reimagined."
             subtitle="We are building India's most reliable, empowering, and scalable delivery network from the ground up."
             breadcrumb={['Home', 'About Us']}
-            imageSrc="/about_hero.png"
-            imageLightSrc="/about_hero_light.png"
+            imageSrc="/about_hero_new.png"
+            imageLightSrc="/about_hero_new.png"
         />
 
         {/* Mission & Vision */}

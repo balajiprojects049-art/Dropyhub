@@ -6,8 +6,8 @@ const Hero = () => {
     return (
         <section className="hero" id="home">
             <div className="hero__bg-layer">
-                <img src="/home_hero.jpg" alt="DropyHub Dark Hero" className="hero__bg-img hero__bg-img--dark" />
-                <img src="/home_hero_light.png" alt="DropyHub Light Hero" className="hero__bg-img hero__bg-img--light" />
+                <img src="/home_hero_new.png" alt="DropyHub Dark Hero" className="hero__bg-img hero__bg-img--dark" />
+                <img src="/home_hero_new.png" alt="DropyHub Light Hero" className="hero__bg-img hero__bg-img--light" />
                 <div className="hero__bg-overlay" />
             </div>
 

@@ -46,7 +46,7 @@ const WarehousePage = () => {
                 highlight="Logistics Giants."
                 subtitle="We empower the backend operations of India's biggest e-commerce platforms with elite workforce and reliable infrastructure."
                 breadcrumb={['Home', 'Warehouse']}
-                imageSrc="/indian_warehouse.png"
+                imageSrc="/warehouse_hero_new.png"
             />
 
             <section className="section">
@@ -86,7 +86,7 @@ const WarehousePage = () => {
                 <div className="container">
                     <div className="transport-flex">
                         <div className="transport-image">
-                            <img src="/indian_warehouse.png" alt="Employee Transportation Bus" />
+                            <img src="/bus_transport.png" alt="Employee Transportation Bus" />
                             <div className="glow-orb" style={{ top: '50%', right: '0', transform: 'translateX(50%)' }} />
                         </div>
                         <div className="transport-content">

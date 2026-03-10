@@ -21,8 +21,8 @@ const PartnershipPage = () => (
             highlight="Sunrisers Hyderabad"
             subtitle="We are proud to be the Official Partner of Sunrisers Hyderabad for IPL 2026 - a partnership built on performance, excellence, and the winning spirit."
             breadcrumb={['Home', 'Partnership']}
-            imageSrc="/partnership_hero.png"
-            imageLightSrc="/partnership_hero_light.png"
+            imageSrc="/partnership_hero_new.png"
+            imageLightSrc="/partnership_hero_new.png"
         />
 
         {/* Orange partnership banner */}

@@ -4,6 +4,9 @@
     overflow: hidden;
     background: var(--page-hero-bg);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .page-hero__orb {
@@ -141,20 +144,26 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom,
-            rgba(3, 7, 18, 0.75) 0%,
-            rgba(3, 7, 18, 0.85) 60%,
-            rgba(3, 7, 18, 1) 100%);
+            rgba(3, 7, 18, 0.10) 0%,
+            rgba(3, 7, 18, 0.25) 50%,
+            rgba(3, 7, 18, 0.40) 100%);
+    /* Mirror transparent — image shows through clearly */
 }
 
 [data-theme="light"] .page-hero__bg-overlay {
-    background: transparent;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0.10) 100%);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    /* Mirror transparent in light mode too */
 }
 
 .page-hero--has-bg {
-    padding: 220px 0 140px;
-    /* Made much taller to show off the beautiful images */
+    aspect-ratio: 12 / 5;
+    min-height: 440px;
+    padding: 120px 0 80px;
+    /* Exactly 1920 × 800 px (12:5 ratio) at full width */
 }
 
 [data-theme="light"] .page-hero__title {
@@ -189,8 +198,9 @@
 /* Responsive */
 @media(max-width: 768px) {
     .page-hero--has-bg {
-        padding: 160px 0 100px;
-        /* Reduce massive vertical height slightly on mobile */
+        aspect-ratio: unset;
+        min-height: 440px;
+        padding: 110px 0 70px;
     }
 
     .page-hero__bg-img--dark {
