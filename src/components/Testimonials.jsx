@@ -4,31 +4,45 @@ import './Testimonials.css';
 const testimonials = [
     {
         name: 'Ramesh Kumar',
-        role: 'Delivery Partner, Hyderabad',
+        role: 'Delivery Partner · Hyderabad · 2 yrs',
         rating: 5,
-        text: 'DropyHub changed my life. Earlier I was struggling with one company. Now I earn 40% more and even got a loan for my bike without any paperwork headaches.',
+        text: 'DropyHub completely changed my life. Before joining, I was stuck with one company earning ₹12,000 a month. Now I work across Swiggy, Zomato, and Blinkit simultaneously and earn ₹28,000+ every month. The weekly bonuses are real and on time. I even got a ₹3 lakh loan to buy a new bike without any paperwork headaches.',
         avatar: 'RK',
     },
     {
         name: 'Suresh Naidu',
-        role: 'Senior Partner, Secunderabad',
+        role: 'Senior Partner · Secunderabad · 3 yrs',
         rating: 5,
-        text: 'The zero registration fee made it easy to join. The weekly bonuses are real and on-time. I recommend DropyHub to every delivery executive I know.',
+        text: 'The zero registration fee made it easy to join when I had nothing. I was skeptical at first — but everything they promised was delivered. I now lead a small team of 8 riders under DropyHub. The monthly awards programme is motivating and the support team is available whenever you need them.',
         avatar: 'SN',
     },
     {
         name: 'Vijay Anand',
-        role: 'Delivery Executive, Bangalore',
+        role: 'IT Trainee (Ex-Delivery Executive) · Bangalore',
         rating: 5,
-        text: 'I never thought I would get IT training while doing delivery. DropyHub gave me both income stability and a roadmap to a better career.',
+        text: 'I never thought I would get into IT while doing delivery. DropyHub\'s free training programme gave me access to data entry and software courses. After 6 months, I transitioned to a junior IT support role. The platform gave me both financial stability and a real career roadmap — something no other company offered.',
         avatar: 'VA',
     },
     {
         name: 'Praveen Reddy',
-        role: 'Partner, Chennai',
+        role: 'Fleet Partner · Chennai · 1.5 yrs',
         rating: 5,
-        text: 'The vehicle rental programme saved me from the burden of taking a loan from outside. Monthly maintenance is included - it is truly a complete package.',
+        text: 'The vehicle rental programme is a lifesaver. I do not own a bike and the daily rental is affordable with full maintenance taken care of. No breakdown stress, no repair costs. I focus solely on delivering and earning. DropyHub truly handles everything so I can focus on what matters.',
         avatar: 'PR',
+    },
+    {
+        name: 'Md. Saleem',
+        role: 'Delivery Executive · Nellore · 1 yr',
+        rating: 5,
+        text: 'I joined DropyHub in Nellore after hearing from a friend. The onboarding was completed in just 2 days — uniform, ID card, everything. I now earn more than I ever did at my previous factory job. The insurance coverage gives my family peace of mind. Best decision I ever made.',
+        avatar: 'MS',
+    },
+    {
+        name: 'Lakshmi Prasad',
+        role: 'Star Partner · Vijayawada · 2 yrs',
+        rating: 5,
+        text: 'Won the Monthly Star Award three times this year. The SRH edition award during IPL season was absolutely special — got signed merchandise and match tickets! DropyHub makes you feel valued and celebrated, not just another rider. The community here is like a family.',
+        avatar: 'LP',
     },
 ];
 
@@ -52,7 +66,7 @@ const Testimonials = () => (
                 </h2>
                 <div className="divider-glow" style={{ margin: '16px auto 0' }} />
                 <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>
-                    Real stories from real delivery executives who chose DropyHub.
+                    Real stories from real delivery executives across India who chose DropyHub and transformed their lives.
                 </p>
             </div>
 

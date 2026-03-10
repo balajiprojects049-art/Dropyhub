@@ -83,10 +83,11 @@ const Services = () => (
                     Everything You Need to <span className="gradient-text">Succeed</span>
                 </h2>
                 <div className="divider-glow" style={{ margin: '16px auto 0' }} />
-                <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center' }}>
-                    DropyHub provides end-to-end professional support - from your first day to your career peak.
+                <p className="section-sub" style={{ margin: '16px auto 0', textAlign: 'center', maxWidth: '720px' }}>
+                    DropyHub provides end-to-end professional support — from your very first day on the road to the peak of your career. Every service below is available to all registered DropyHub partners at <strong>zero registration cost</strong>.
                 </p>
             </div>
+
 
             <div className="services__grid">
                 {services.map((s, i) => (

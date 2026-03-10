@@ -31,8 +31,18 @@ const quickStats = [
         )
     },
     {
+        num: '11+', label: 'Platform Partners', icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        )
+    },
+    {
         num: '₹10L', label: 'Max Loan Available', icon: (
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+        )
+    },
+    {
+        num: '48 hrs', label: 'Onboarding Time', icon: (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         )
     },
     {
@@ -216,37 +226,56 @@ const HomePage = () => (
             </div>
         </section>
 
-        {/* Why Companies Choose */}
-        <section className="home-b2b section">
+        {/* About DropyHub — Company Overview */}
+        <section className="home-b2b section" style={{ borderTop: '1px solid var(--border)' }}>
             <div className="container">
-                <h2 className="section-title">Why Leading Companies Choose <span className="gradient-text">DropyHub</span></h2>
-                <p className="section-sub" style={{ margin: '16px 0 48px', maxWidth: '700px' }}>
-                    We simplify workforce management by offering reliable, flexible delivery staffing solutions.
+                <div className="home-overview__header">
+                    <div className="section-tag">About DropyHub</div>
+                    <h2 className="section-title">India's Most <span className="gradient-text">Partner-First</span> Delivery Network</h2>
+                    <div className="divider-glow" style={{ margin: '16px auto 0' }} />
+                </div>
+                <p className="section-sub" style={{ margin: '24px auto 16px', maxWidth: '780px', textAlign: 'center' }}>
+                    DropyHub is a last-mile delivery staffing and partner ecosystem platform headquartered in Hyderabad, Telangana. Founded in 2023, we connect delivery executives to India's top platforms Swiggy, Zomato, Blinkit, Amazon, Zepto, Flipkart, BookMyShow, Uber, and more through a single, free-to-join partnership.
+                </p>
+                <p className="section-sub" style={{ margin: '0 auto 40px', maxWidth: '780px', textAlign: 'center' }}>
+                    Unlike traditional staffing agencies, DropyHub goes beyond placement. We provide vehicle rentals, financial loans up to ₹10 Lakhs, comprehensive insurance, free IT career training, weekly bonuses, monthly awards, and 24/7 partner support  making us a complete life and career platform for 5,000+ active delivery partners across 12+ cities in India.
                 </p>
 
-                <div className="home-b2b__grid">
+                <div className="home-b2b__grid" style={{ gridTemplateColumns: 'repeat(6, 1fr)' }}>
                     <div className="home-b2b__card glass-card">
                         <div className="home-b2b__icon">👨‍✈️</div>
                         <h3 className="home-b2b__title">Skilled &<br />Verified Riders</h3>
-                        <p className="home-b2b__desc">Every rider is background-checked, trained, and ready to deliver.</p>
+                        <p className="home-b2b__desc">Every rider is background verified, professionally trained, uniformed, and equipped with safety gear before their first delivery.</p>
                     </div>
 
                     <div className="home-b2b__card glass-card">
                         <div className="home-b2b__icon">📉</div>
                         <h3 className="home-b2b__title">Low<br />Attrition Rates</h3>
-                        <p className="home-b2b__desc">DropyHub's reward systems and rider support reduce turnover.</p>
+                        <p className="home-b2b__desc">Our reward systems, insurance, loans, and career development programmes keep partners motivated and loyal  giving you a stable workforce.</p>
                     </div>
 
                     <div className="home-b2b__card glass-card">
                         <div className="home-b2b__icon">🗺️</div>
-                        <h3 className="home-b2b__title">Pan-India<br />Reach</h3>
-                        <p className="home-b2b__desc">Operates in 7+ cities, covering major delivery zones.</p>
+                        <h3 className="home-b2b__title">12+ Cities,<br />Pan-India Reach</h3>
+                        <p className="home-b2b__desc">Active in Hyderabad, Bangalore, Chennai, Vijayawada, Nellore, Kavali, Ongole, Visakhapatnam, Guntur, Tirupati, and expanding every quarter.</p>
                     </div>
 
                     <div className="home-b2b__card glass-card">
                         <div className="home-b2b__icon">🤝</div>
-                        <h3 className="home-b2b__title">Rider Management<br />Support</h3>
-                        <p className="home-b2b__desc">Help you track and support your riders so you can focus on business.</p>
+                        <h3 className="home-b2b__title">End-to-End<br />Workforce Management</h3>
+                        <p className="home-b2b__desc">From recruitment and onboarding to daily performance tracking and grievance resolution  DropyHub manages everything so you can focus on your business.</p>
+                    </div>
+
+                    <div className="home-b2b__card glass-card">
+                        <div className="home-b2b__icon">⚡</div>
+                        <h3 className="home-b2b__title">48-Hour<br />Deployment</h3>
+                        <p className="home-b2b__desc">Need delivery staff urgently? We can onboard and deploy verified riders to your zone within 48 hours  no delays, no bureaucracy.</p>
+                    </div>
+
+                    <div className="home-b2b__card glass-card">
+                        <div className="home-b2b__icon">🏆</div>
+                        <h3 className="home-b2b__title">SRH Official<br />Partner 2026</h3>
+                        <p className="home-b2b__desc">DropyHub is the Official Partner of Sunrisers Hyderabad for IPL 2026  a testament to our national credibility, brand strength, and operational scale.</p>
                     </div>
                 </div>
             </div>
