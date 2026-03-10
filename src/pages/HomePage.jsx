@@ -13,7 +13,10 @@ const partners = [
     { name: 'Zepto', src: '/logos/zepto.png' },
     { name: 'Uber', src: '/logos/uber.png' },
     { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
-    { name: 'Flipkart', src: '/logos/flipkart.png' }
+    { name: 'Flipkart', src: '/logos/flipkart.png' },
+    { name: 'BookMyShow', src: '/logos/bookmyshow.png' },
+    { name: 'amazon', src: '/logos/amazon-logo.jpg' },
+    { name: 'delivery', src: '/logos/images.png' },
 ];
 
 const quickStats = [
