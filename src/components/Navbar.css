@@ -1,19 +1,18 @@
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 999;
     padding: 18px 0;
-    transition: all 0.4s ease;
-}
-
-.navbar--scrolled {
     background: var(--navbar-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--navbar-border);
+    transition: all 0.4s ease;
+}
+
+.navbar--scrolled {
     padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .navbar__inner {
@@ -56,26 +55,6 @@
 .navbar__link:hover {
     color: var(--text-primary);
     background: var(--surface);
-}
-
-/* Force light mode links to be white while at the top of the dark image */
-@media (min-width: 961px) {
-    [data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link {
-        color: rgba(255, 255, 255, 0.9);
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-    }
-
-    [data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__link:hover {
-        color: #fff;
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.2);
-    }
-}
-
-/* Ensure hamburger icon is white and visible when at top of page in light mode */
-[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar__hamburger span {
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .navbar__link--active {

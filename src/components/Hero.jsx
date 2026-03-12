@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        // Automatically hide text after 5 seconds
+        const timer = setTimeout(() => {
+            setIsVisible(false);
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <section className="hero" id="home">
+        <section 
+            className="hero" 
+            id="home"
+            onMouseEnter={() => setIsVisible(true)}
+            onMouseLeave={() => setIsVisible(false)}
+        >
             <div className="hero__bg-layer">
                 <img src="/home_hero_new.png" alt="DropyHub Dark Hero" className="hero__bg-img hero__bg-img--dark" />
                 <img src="/home_hero_new.png" alt="DropyHub Light Hero" className="hero__bg-img hero__bg-img--light" />
                 <div className="hero__bg-overlay" />
             </div>
 
-            <div className="container hero__inner">
+            <div className={`container hero__inner ${!isVisible ? 'hero__inner--hidden' : ''}`}>
                 <div className="hero__content fade-up">
                     {/* SRH Badge */}
                     <div className="hero__srh-badge">
@@ -51,7 +67,7 @@ const Hero = () => {
             </div>
 
             {/* Scroll indicator */}
-            <div className="hero__scroll">
+            <div className={`hero__scroll ${!isVisible ? 'hero__scroll--hidden' : ''}`}>
                 <div className="hero__scroll-dot" />
                 <span>Scroll to explore</span>
             </div>

@@ -1,6 +1,6 @@
 .page-hero {
     position: relative;
-    padding: 140px 0 72px;
+    padding: 72px 0;
     overflow: hidden;
     background: var(--page-hero-bg);
     text-align: center;
@@ -50,6 +50,15 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-hero__inner--hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
 }
 
 .page-hero__breadcrumb {
@@ -161,8 +170,8 @@
 
 .page-hero--has-bg {
     aspect-ratio: 12 / 5;
-    min-height: 440px;
-    padding: 120px 0 80px;
+    min-height: calc(440px - 70px);
+    padding: 70px 0 80px;
     /* Exactly 1920 × 800 px (12:5 ratio) at full width */
 }
 
@@ -193,6 +202,42 @@
 [data-theme="light"] .breadcrumb-active {
     color: #FFD54F;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure strong text contrast for hero sections with images across all themes */
+.page-hero--has-bg .page-hero__title,
+.page-hero--has-bg .page-hero__sub,
+.page-hero--has-bg .breadcrumb-sep,
+.page-hero--has-bg .breadcrumb-link,
+.page-hero--has-bg .breadcrumb-active {
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.page-hero--has-bg .page-hero__title .gradient-text {
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
+}
+
+.page-hero--has-bg .page-hero__sub {
+    color: #fff;
+    font-weight: 500;
+}
+
+.page-hero--has-bg .breadcrumb-link,
+.page-hero--has-bg .breadcrumb-sep {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.page-hero--has-bg .breadcrumb-active {
+    color: #fff;
+}
+
+.page-hero--has-bg .section-tag {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(216, 27, 96, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive */
