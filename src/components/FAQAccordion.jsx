@@ -146,10 +146,7 @@ const FAQAccordion = ({ single = true }) => {
           ))}
         </div>
 
-        <div className="faq-controls">
-          <button className="btn-outline" onClick={() => setOpenIndex(faqs.map((_, i) => i))}>Expand all</button>
-          <button className="btn-outline" onClick={() => setOpenIndex(null)} style={{ marginLeft: '12px' }}>Collapse all</button>
-        </div>
+
       </div>
     </section>
   );

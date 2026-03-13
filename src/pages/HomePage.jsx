@@ -241,7 +241,7 @@ const HomePage = () => (
                     Unlike traditional staffing agencies, DropyHub goes beyond placement. We provide vehicle rentals, financial loans up to ₹10 Lakhs, comprehensive insurance, free IT career training, weekly bonuses, monthly awards, and 24/7 partner support  making us a complete life and career platform for 5,000+ active delivery partners across 12+ cities in India.
                 </p>
 
-                <div className="home-b2b__grid" style={{ gridTemplateColumns: 'repeat(6, 1fr)' }}>
+                <div className="home-b2b__grid">
                     <div className="home-b2b__card glass-card">
                         <div className="home-b2b__icon">👨‍✈️</div>
                         <h3 className="home-b2b__title">Skilled &<br />Verified Riders</h3>
