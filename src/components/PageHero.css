@@ -111,7 +111,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     width: 100%;
 }
 
@@ -209,10 +209,7 @@
 .page-hero--has-bg .breadcrumb-sep,
 .page-hero--has-bg .breadcrumb-link,
 .page-hero--has-bg .breadcrumb-active {
-    text-shadow: 
-        0 4px 20px rgba(0, 0, 0, 0.9),
-        0 2px 8px rgba(0, 0, 0, 1),
-        0 0 40px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .page-hero--has-bg .page-hero__title .gradient-text {
@@ -226,26 +223,30 @@
     color: #ffffff;
     font-weight: 600;
     font-size: 1.15rem;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 1);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .page-hero--has-bg .breadcrumb-link,
 .page-hero--has-bg .breadcrumb-sep {
-    color: rgba(255, 255, 255, 0.85);
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .page-hero--has-bg .breadcrumb-active {
-    color: #fff;
+    color: #ffffff !important;
+    font-weight: 700;
 }
 
 .page-hero--has-bg .section-tag {
-    background: rgba(0, 0, 0, 0.8);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* ─── MOBILE: 3:2 ratio (768×499px target) ───────────────
@@ -331,11 +332,28 @@
 
     /* Scaled-down title & subtitle for 3:2 frame */
     .page-hero__title {
-        font-size: clamp(1.4rem, 6.5vw, 2rem);
+        font-size: clamp(1.1rem, 4.5vw, 1.5rem);
+    }
+
+    .page-hero--has-bg .page-hero__title {
+        font-size: clamp(0.95rem, 4vw, 1.3rem);
+        letter-spacing: -0.3px;
+        margin-bottom: 4px;
     }
 
     .page-hero--has-bg .page-hero__sub {
-        font-size: 0.78rem;
-        line-height: 1.4;
+        font-size: 0.62rem;
+        line-height: 1.35;
+        max-width: 90%;
+    }
+
+    .page-hero--has-bg .section-tag {
+        font-size: 9px;
+        padding: 4px 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .page-hero--has-bg .page-hero__breadcrumb {
+        font-size: 10px;
     }
 }
