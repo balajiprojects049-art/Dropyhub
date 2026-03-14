@@ -69,7 +69,7 @@ const Footer = () => (
                         Hyderabad, Telangana, India
                     </div>
                     <div className="footer__srh-tag">
-                        🟠 Official SRH IPL 2025 Partner
+                        🟠 Official SRH TATA IPL 2025 Partner
                     </div>
                 </div>
             </div>

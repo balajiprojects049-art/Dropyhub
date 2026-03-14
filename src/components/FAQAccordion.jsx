@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: 'What is the SRH partnership and what does it mean for me?',
-    a: 'DropyHub is the Official Partner of Sunrisers Hyderabad (SRH) for IPL 2026. This is a landmark recognition of DropyHub\'s strength and credibility as a platform. For you as a partner, it means exclusive match ticket rewards for top performers, co-branded merchandise, special SRH Edition Monthly Awards, and national-level visibility that reflects our platform\'s professional stature.'
+    a: 'DropyHub is the Official Partner of Sunrisers Hyderabad (SRH) for TATA IPL 2026. This is a landmark recognition of DropyHub\'s strength and credibility as a platform. For you as a partner, it means exclusive match ticket rewards for top performers, co-branded merchandise, special SRH Edition Monthly Awards, and national-level visibility that reflects our platform\'s professional stature.'
   },
   {
     q: 'How does DropyHub support my career growth long-term?',

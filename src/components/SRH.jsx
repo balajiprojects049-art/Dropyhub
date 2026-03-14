@@ -12,7 +12,7 @@ const SRH = () => (
                 <div className="srh__content">
                     <div className="srh__badge-row">
                         <div className="srh__live-dot" />
-                        <span className="srh__live-text">IPL 2025 · Official Partnership</span>
+                        <span className="srh__live-text">TATA IPL 2025 · Official Partnership</span>
                     </div>
 
                     <h2 className="srh__headline">
@@ -22,7 +22,7 @@ const SRH = () => (
 
                     <p className="srh__desc">
                         DropyHub is proud to be the <strong>Official Partner of Sunrisers Hyderabad</strong> for
-                        IPL 2025. This partnership reflects our commitment to performance, teamwork, and winning -
+                        TATA IPL 2025. This partnership reflects our commitment to performance, teamwork, and winning -
                         values that define both the SRH organization and every delivery partner in our network.
                     </p>
 
@@ -64,7 +64,7 @@ const SRH = () => (
                         <span>Official Partner 2025</span>
                     </div>
                     <div className="srh__ipl-badge">
-                        <div className="srh__ipl-num">IPL</div>
+                        <div className="srh__ipl-num">TATA IPL</div>
                         <div className="srh__ipl-year">2025</div>
                     </div>
                 </div>

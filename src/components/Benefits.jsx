@@ -3,7 +3,7 @@ import './Benefits.css';
 
 const benefits = [
     { icon: '💵', title: 'Competitive Salary', desc: 'Industry-benchmark base pay with performance-linked top-ups. Our partners earn ₹18,000–₹32,000/month on average, with top earners crossing ₹45,000 during peak seasons.' },
-    { icon: '🏆', title: 'Monthly & Annual Awards', desc: 'Recognition-based awards every month and year for top-performing partners. Winners receive cash prizes, vouchers, trophies, and during IPL season — exclusive SRH match tickets.' },
+    { icon: '🏆', title: 'Monthly & Annual Awards', desc: 'Recognition-based awards every month and year for top-performing partners. Winners receive cash prizes, vouchers, trophies, and during TATA IPL season — exclusive SRH match tickets.' },
     { icon: '🛡️', title: 'Full Insurance Coverage', desc: 'Comprehensive accidental insurance from day one at zero extra cost. Covers medical treatment, temporary disability, and vehicle damage. Plus 24/7 SOS emergency helpline through our app.' },
     { icon: '🎓', title: 'Free IT Skill Training', desc: 'Certified courses in software, data entry, IT operations, and customer support — completely free for all active partners. A genuine career bridge from delivery executive to tech professional.' },
     { icon: '⛑️', title: 'Safety Gear & Uniform', desc: 'Professional DropyHub uniform, branded helmet, reflective jacket, and complete safety equipment provided and maintained. Look professional, stay safe, at zero cost to you.' },

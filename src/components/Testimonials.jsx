@@ -41,7 +41,7 @@ const testimonials = [
         name: 'Lakshmi Prasad',
         role: 'Star Partner · Vijayawada · 2 yrs',
         rating: 5,
-        text: 'Won the Monthly Star Award three times this year. The SRH edition award during IPL season was absolutely special — got signed merchandise and match tickets! DropyHub makes you feel valued and celebrated, not just another rider. The community here is like a family.',
+        text: 'Won the Monthly Star Award three times this year. The SRH edition award during TATA IPL season was absolutely special — got signed merchandise and match tickets! DropyHub makes you feel valued and celebrated, not just another rider. The community here is like a family.',
         avatar: 'LP',
     },
 ];

@@ -10,7 +10,7 @@ const milestones = [
     { year: '2024', event: 'Launched Vehicle Rental Programme and Financial Loan Services — giving partners access to vehicles and capital that was previously out of reach.' },
     { year: '2024', event: 'Reached 5,000+ active partners. Launched IT Training Programme enabling delivery executives to transition into tech careers.' },
     { year: '2025', event: 'Expanded operations into Nellore, Kavali, and Prakasam districts — bringing the DropyHub ecosystem to Tier-2 cities across Andhra Pradesh.' },
-    { year: '2026', event: 'Announced Official Partnership with Sunrisers Hyderabad for IPL 2026 — a national recognition of DropyHub\'s brand strength and community reach.' },
+    { year: '2026', event: 'Announced Official Partnership with Sunrisers Hyderabad for TATA IPL 2026 — a national recognition of DropyHub\'s brand strength and community reach.' },
     { year: '2026', event: 'Launched Refer & Earn Programme and Partner Leadership Track — creating pathways for top partners to become team leaders and city coordinators.' },
 ];
 
@@ -228,7 +228,7 @@ const AboutPage = () => (
                         { emoji: '🎓', title: 'Free Career Training', desc: 'DropyHub is the only delivery platform in India that offers free IT skill training to transition partners into software and tech roles — at zero cost.' },
                         { emoji: '🏦', title: 'Financial Safety Net', desc: 'Loans up to ₹10 Lakhs for any purpose. No moneylenders, no informal borrowing. Professional, licensed lending through our NBFC partnerships.' },
                         { emoji: '🛵', title: 'Vehicle Without Ownership', desc: 'Start earning on day one even if you do not own a vehicle. Our affordable rental programme handles everything — maintenance, insurance, and repairs.' },
-                        { emoji: '🏆', title: 'Recognition & Respect', desc: 'Monthly Star Awards, SRH IPL edition prizes, annual ceremonies, and a leadership career track. At DropyHub, your hard work is always seen and celebrated.' },
+                        { emoji: '🏆', title: 'Recognition & Respect', desc: 'Monthly Star Awards, SRH TATA IPL edition prizes, annual ceremonies, and a leadership career track. At DropyHub, your hard work is always seen and celebrated.' },
                     ].map(item => (
                         <div key={item.title} className="glass-card" style={{ padding: '28px 24px', borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             <div style={{ fontSize: '2rem' }}>{item.emoji}</div>
