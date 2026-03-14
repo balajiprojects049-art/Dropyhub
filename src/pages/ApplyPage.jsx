@@ -12,8 +12,8 @@ const ApplyPage = () => (
             highlight="It's Completely Free"
             subtitle="Register as a DropyHub delivery partner in under 5 minutes. No fee, no documents burden. Just your name, phone, and city. Start earning within 48 hours."
             breadcrumb={['Home', 'Apply Now']}
-            imageSrc="/apply_hero_new.webp"
-            imageLightSrc="/apply_hero_new.webp"
+            imageSrc="/apply_hero_blue_edited.png"
+            imageLightSrc="/apply_hero_blue_edited.png"
         />
         <Apply />
 
