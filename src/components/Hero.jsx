@@ -23,12 +23,12 @@ const Hero = () => {
         >
             <div className="hero__bg-layer">
                 <picture>
-                    <source media="(max-width: 768px)" srcSet="/home_hero_mobile.png" />
-                    <img src="/home_hero_new.png" alt="DropyHub Dark Hero" className="hero__bg-img hero__bg-img--dark" />
+                    <source media="(max-width: 768px)" srcSet="/home_hero_mobile.webp" />
+                    <img src="/home_hero_new.webp" alt="DropyHub Dark Hero" className="hero__bg-img hero__bg-img--dark" />
                 </picture>
                 <picture>
-                    <source media="(max-width: 768px)" srcSet="/home_hero_mobile.png" />
-                    <img src="/home_hero_new.png" alt="DropyHub Light Hero" className="hero__bg-img hero__bg-img--light" />
+                    <source media="(max-width: 768px)" srcSet="/home_hero_mobile.webp" />
+                    <img src="/home_hero_new.webp" alt="DropyHub Light Hero" className="hero__bg-img hero__bg-img--light" />
                 </picture>
                 <div className="hero__bg-overlay" />
             </div>

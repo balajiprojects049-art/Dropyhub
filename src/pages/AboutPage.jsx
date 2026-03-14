@@ -64,8 +64,8 @@ const AboutPage = () => (
             highlight="Reimagined."
             subtitle="We are building India's most reliable, empowering, and scalable delivery network — where every partner earns more, grows more, and lives better."
             breadcrumb={['Home', 'About Us']}
-            imageSrc="/about_hero_new.png"
-            imageLightSrc="/about_hero_new.png"
+            imageSrc="/about_hero_new.webp"
+            imageLightSrc="/about_hero_new.webp"
         />
 
         {/* Mission & Vision */}

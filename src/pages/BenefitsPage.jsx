@@ -12,8 +12,8 @@ const BenefitsPage = () => (
             highlight="Earn With Pride."
             subtitle="We treat our delivery executives as true partners, offering the industry's best benefits, flexibility, and financial security."
             breadcrumb={['Home', 'Benefits']}
-            imageSrc="/benefits-banner.png"
-            imageLightSrc="/benefits-banner.png"
+            imageSrc="/benefits-banner.webp"
+            imageLightSrc="/benefits-banner.webp"
         />
         <Benefits />
         <Testimonials />
