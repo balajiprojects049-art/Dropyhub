@@ -12,8 +12,8 @@ const ServicesPage = () => (
             highlight="Driven by Reliability."
             subtitle="From hyper-local superfast deliveries to large-scale enterprise logistics, we tailor our solutions to your every need."
             breadcrumb={['Home', 'Services']}
-            imageSrc="/services_hero_new.jpeg"
-            imageLightSrc="/services_hero_new.jpeg"
+            imageSrc="/services_hero_new.png"
+            imageLightSrc="/services_hero_new.png"
         />
         <Services />
         <HowItWorks />
