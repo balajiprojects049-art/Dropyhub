@@ -15,8 +15,11 @@ const partners = [
     { name: 'Flipkart Minutes', src: '/logos/flipkart_minutes.png' },
     { name: 'Flipkart', src: '/logos/flipkart.png' },
     { name: 'BookMyShow', src: '/logos/bookmyshow.png' },
-    { name: 'amazon', src: '/logos/amazon-logo.jpg' },
-    { name: 'delivery', src: '/logos/images.png' },
+    { name: 'amazon', src: '/logos/amazon-logo.png' },
+    { name: 'delivery', src: '/logos/images.jpeg' },
+    { name: 'Big Basket', src: '/logos/big basket.jpeg' },
+    { name: 'Rapido', src: '/logos/rapido.jpeg' },
+    { name: 'Shadowfax', src: '/logos/shadowfax.jpeg' },
 ];
 
 const quickStats = [

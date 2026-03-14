@@ -124,7 +124,10 @@ const AboutPage = () => (
                                         { name: 'Flipkart', src: '/logos/flipkart.png' },
                                         { name: 'BookMyShow', src: '/logos/bookmyshow.png' },
                                         { name: 'Amazon', src: '/logos/amazon-logo.jpg' },
-                                        { name: 'Delivery', src: '/logos/images.png' },
+                                        { name: 'Delivery', src: '/logos/images.jpeg' },
+                                        { name: 'Big Basket', src: '/logos/big basket.jpeg' },
+                                        { name: 'Rapido', src: '/logos/rapido.jpeg' },
+                                        { name: 'Shadowfax', src: '/logos/shadowfax.jpeg' },
                                         // Duplicate for seamless loop
                                         { name: 'Swiggy', src: '/logos/swiggy1.png' },
                                         { name: 'Swiggy Instamart', src: '/logos/swiggy_instamart.png' },
@@ -136,7 +139,10 @@ const AboutPage = () => (
                                         { name: 'Flipkart', src: '/logos/flipkart.png' },
                                         { name: 'BookMyShow', src: '/logos/bookmyshow.png' },
                                         { name: 'Amazon', src: '/logos/amazon-logo.jpg' },
-                                        { name: 'Delivery', src: '/logos/images.png' },
+                                        { name: 'Delivery', src: '/logos/images.jpeg' },
+                                        { name: 'Big Basket', src: '/logos/big basket.jpeg' },
+                                        { name: 'Rapido', src: '/logos/rapido.jpeg' },
+                                        { name: 'Shadowfax', src: '/logos/shadowfax.jpeg' },
                                     ].map((b, i) => (
                                         <div key={i} className="about__tag">
                                             <img src={b.src} alt={b.name} className="about__tag-logo" />
