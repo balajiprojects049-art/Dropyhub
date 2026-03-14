@@ -23,6 +23,7 @@ const PartnershipPage = () => (
             breadcrumb={['Home', 'Partnership']}
             imageSrc="/partnership_hero_new.png"
             imageLightSrc="/partnership_hero_new.png"
+            mobileImageSrc="/partnership_hero_mobile.png"
         />
 
         {/* Orange partnership banner */}

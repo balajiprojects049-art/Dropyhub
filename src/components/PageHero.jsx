@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PageHero.css';
 
-const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, imageLightSrc }) => {
+const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, imageLightSrc, mobileImageSrc }) => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
@@ -23,9 +23,15 @@ const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, image
         >
             {imageSrc && (
                 <div className="page-hero__bg-layer">
-                    <img src={imageSrc} alt="" className={`page-hero__bg-img ${imageLightSrc ? 'page-hero__bg-img--dark' : ''}`} />
+                    <picture>
+                        {mobileImageSrc && <source media="(max-width: 768px)" srcSet={mobileImageSrc} />}
+                        <img src={imageSrc} alt="" className={`page-hero__bg-img ${imageLightSrc ? 'page-hero__bg-img--dark' : ''}`} />
+                    </picture>
                     {imageLightSrc && (
-                        <img src={imageLightSrc} alt="" className="page-hero__bg-img page-hero__bg-img--light" />
+                        <picture>
+                            {mobileImageSrc && <source media="(max-width: 768px)" srcSet={mobileImageSrc} />}
+                            <img src={imageLightSrc} alt="" className="page-hero__bg-img page-hero__bg-img--light" />
+                        </picture>
                     )}
                     <div className="page-hero__bg-overlay" />
                 </div>

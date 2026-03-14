@@ -248,25 +248,94 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive */
-@media(max-width: 768px) {
-    .page-hero--has-bg {
-        aspect-ratio: unset;
-        min-height: 440px;
-        padding: 110px 0 70px;
+/* ─── MOBILE: 3:2 ratio (768×499px target) ───────────────
+   Image starts flush against navbar. Text sits over image.
+   Desktop (>768px) is completely unchanged.
+──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* Base page-hero (no image) */
+    .page-hero {
+        padding-top: 56px;
+        padding-bottom: 40px;
     }
 
+
+    /* Page hero WITH image — no margin needed, layout already clears navbar */
+    .page-hero--has-bg {
+        position: relative;
+        aspect-ratio: unset;
+        height: 66.67vw;      /* pure 3:2 image area */
+        min-height: auto;
+        padding: 0;
+        overflow: hidden;
+        background: transparent;
+    }
+
+    /* bg-layer fills from top:0 — clean, no tricks */
+    .page-hero--has-bg .page-hero__bg-layer {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    /* Image fills the layer */
+    .page-hero--has-bg .page-hero__bg-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-height: none;
+    }
+
+    /* Overlay gradient */
+    .page-hero--has-bg .page-hero__bg-overlay {
+        position: absolute;
+        inset: 0;
+    }
+
+    /* Text overlay: centred, no navbar offset needed */
+    .page-hero--has-bg .page-hero__inner {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 3;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 16px !important;
+        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .page-hero--has-bg .page-hero__inner * {
+        pointer-events: auto;
+    }
+
+    /* Image anchored to top so subject is visible */
     .page-hero__bg-img--dark {
-        object-position: 70% center;
-        /* Keep subjects in frame on native portrait aspect ratios */
+        object-position: center top;
     }
 
     [data-theme="light"] .page-hero__bg-img--light {
-        object-position: 75% center;
-        /* Ensure AI subjects face inward or are visible */
+        object-position: center top;
     }
 
+    /* Scaled-down title & subtitle for 3:2 frame */
     .page-hero__title {
-        font-size: clamp(2.2rem, 9vw, 3rem);
+        font-size: clamp(1.4rem, 6.5vw, 2rem);
+    }
+
+    .page-hero--has-bg .page-hero__sub {
+        font-size: 0.78rem;
+        line-height: 1.4;
     }
 }
