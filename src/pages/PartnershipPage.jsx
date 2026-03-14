@@ -5,7 +5,7 @@ import SRH from '../components/SRH';
 import './PartnershipPage.css';
 
 const highlights = [
-    { icon: '🏆', title: 'Elite Brand Visibility', desc: 'DropyHub branding appears across all SRH match venues, jerseys, and official digital channels during IPL 2026.' },
+    { icon: '🏆', title: 'Elite Brand Visibility', desc: 'DropyHub branding appears across all SRH match venues, jerseys, and official digital channels during IPL 2025.' },
     { icon: '🎟️', title: 'Match Ticket Rewards', desc: 'Top-performing delivery partners are rewarded with exclusive SRH match tickets as part of our incentive programme.' },
     { icon: '🧢', title: 'Branded Merchandise', desc: 'Official SRH × DropyHub co-branded merchandise gifted to our star partners and during special campaigns.' },
     { icon: '📡', title: 'National Media Exposure', desc: 'The partnership receives national TV and digital media coverage during the IPL season, elevating the DropyHub brand.' },
@@ -16,10 +16,10 @@ const highlights = [
 const PartnershipPage = () => (
     <>
         <PageHero
-            tag="IPL 2026 Partnership"
+            tag="IPL 2025 Partnership"
             title="DropyHub ×"
             highlight="Sunrisers Hyderabad"
-            subtitle="We are proud to be the Official Partner of Sunrisers Hyderabad for IPL 2026 - a partnership built on performance, excellence, and the winning spirit."
+            subtitle="We are proud to be the Official Partner of Sunrisers Hyderabad for IPL 2025 - a partnership built on performance, excellence, and the winning spirit."
             breadcrumb={['Home', 'Partnership']}
             imageSrc="/partnership_hero_new.png"
             imageLightSrc="/partnership_hero_new.png"
@@ -33,7 +33,7 @@ const PartnershipPage = () => (
                 <div className="partner-banner__left">
                     <div className="partner-banner__live">
                         <div className="partner-banner__dot" />
-                        <span>LIVE PARTNERSHIP · IPL 2026</span>
+                        <span>LIVE PARTNERSHIP · IPL 2025</span>
                     </div>
                     <div className="partner-banner__text">
                         <strong>DropyHub</strong> × <strong style={{ color: '#FF6B00' }}>Sunrisers Hyderabad</strong>

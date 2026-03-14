@@ -80,7 +80,7 @@ const homeSections = [
     {
         icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /><line x1="6" y1="1" x2="6" y2="4" /><line x1="10" y1="1" x2="10" y2="4" /><line x1="14" y1="1" x2="14" y2="4" /></svg>,
         title: 'SRH Official Partner',
-        desc: 'Proud official partner of Sunrisers Hyderabad for IPL 2026 season.',
+        desc: 'Proud official partner of Sunrisers Hyderabad for IPL 2025 season.',
         link: '/partnership',
         linkLabel: 'View Partnership',
     },
@@ -277,8 +277,8 @@ const HomePage = () => (
 
                     <div className="home-b2b__card glass-card">
                         <div className="home-b2b__icon">🏆</div>
-                        <h3 className="home-b2b__title">SRH Official<br />Partner 2026</h3>
-                        <p className="home-b2b__desc">DropyHub is the Official Partner of Sunrisers Hyderabad for IPL 2026  a testament to our national credibility, brand strength, and operational scale.</p>
+                        <h3 className="home-b2b__title">SRH Official<br />Partner 2025</h3>
+                        <p className="home-b2b__desc">DropyHub is the Official Partner of Sunrisers Hyderabad for IPL 2025  a testament to our national credibility, brand strength, and operational scale.</p>
                     </div>
                 </div>
             </div>
@@ -308,13 +308,13 @@ const HomePage = () => (
                     <div className="home-srh-teaser__left">
                         <div className="home-srh-teaser__badge">
                             <div className="srh-badge__dot" style={{ background: '#FF6B00', boxShadow: '0 0 8px #FF6B00' }} />
-                            IPL 2026 Official Partnership
+                            IPL 2025 Official Partnership
                         </div>
                         <h2 className="home-srh-teaser__title">
                             DropyHub × <span className="gradient-text">Sunrisers Hyderabad</span>
                         </h2>
                         <p className="home-srh-teaser__desc">
-                            We are the Official Partner of SRH for IPL 2026. This landmark partnership reflects our commitment to performance, excellence, and winning - for our partners and for the game.
+                            We are the Official Partner of SRH for IPL 2025. This landmark partnership reflects our commitment to performance, excellence, and winning - for our partners and for the game.
                         </p>
                         <Link to="/partnership" className="btn-primary">
                             Explore Partnership
@@ -329,7 +329,7 @@ const HomePage = () => (
                             <div className="home-srh-ring home-srh-ring--1" />
                             <div className="home-srh-ring home-srh-ring--2" />
                         </div>
-                        <div className="home-srh-ipl-text">🏏 Sunrisers Hyderabad<br /><span>Official Partner 2026</span></div>
+                        <div className="home-srh-ipl-text">🏏 Sunrisers Hyderabad<br /><span>Official Partner 2025</span></div>
                     </div>
                 </div>
             </div>
