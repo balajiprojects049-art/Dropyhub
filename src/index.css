@@ -123,12 +123,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   font-family: 'Inter', 'Space Grotesk', sans-serif;
   background-color: var(--bg-deep);
   color: var(--text-primary);
   line-height: 1.65;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

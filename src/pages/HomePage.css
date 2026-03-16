@@ -1077,7 +1077,7 @@
     }
 
     .home-stats-bar__inner {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 0;
     }
 
@@ -1101,12 +1101,12 @@
     }
 
     .home-choose__float-card--top {
-        left: -8vw;
+        left: 0;
         top: 20px;
     }
 
     .home-choose__float-card--bottom {
-        right: -4vw;
+        right: 0;
         bottom: 24px;
     }
 
