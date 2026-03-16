@@ -72,6 +72,24 @@ const PartnershipPage = () => (
                 </div>
             </div>
         </section>
+        
+        {/* Sponsors Section */}
+        <section className="section section-alt" style={{ padding: '80px 0' }}>
+            <div className="container" style={{ textAlign: 'center' }}>
+                <div className="section-tag">Network Ecosystem</div>
+                <h2 className="section-title">Official Sponsors & <span className="gradient-text">Partners</span></h2>
+                <div className="divider-glow" style={{ margin: '16px auto 40px' }} />
+                
+                <div className="partner-images__wrap">
+                    <div className="partner-images__all glass-card">
+                        <img src="/Gemini_Generated_Image_ryjsn7ryjsn7ryjs.png" alt="All Sponsors" className="partner-img" />
+                    </div>
+                    <div className="partner-images__grid glass-card" style={{ marginTop: '24px' }}>
+                        <img src="/WhatsApp Image 2026-03-16 at 1.30.01 PM (1).jpeg" alt="Our Partners Grid" className="partner-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
 
         {/* CTA */}
         <section className="section section-alt">
