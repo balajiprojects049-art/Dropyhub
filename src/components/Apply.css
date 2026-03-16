@@ -1,113 +1,176 @@
+/* ──────────────────────────────────────────
+   Apply Form — Premium Edition
+────────────────────────────────────────── */
+
 .apply__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    gap: 72px;
+    align-items: start;
 }
 
-/* Info side */
+/* ─── Info side ─── */
 .apply__benefits-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 14px;
+    margin-bottom: 36px;
 }
 
 .apply__benefit-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     font-size: 14.5px;
     color: var(--text-secondary);
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: all 0.28s ease;
+}
+
+.apply__benefit-item:hover {
+    border-color: rgba(233, 30, 140, 0.25);
+    background: var(--surface-2);
+    transform: translateX(6px);
+    color: var(--text-primary);
 }
 
 .apply__check {
-    width: 24px;
-    height: 24px;
-    background: rgba(216, 27, 96, 0.15);
-    border: 1px solid rgba(216, 27, 96, 0.3);
+    width: 26px;
+    height: 26px;
+    background: rgba(233, 30, 140, 0.1);
+    border: 1px solid rgba(233, 30, 140, 0.28);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     color: var(--pink-light);
+    transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.apply__benefit-item:hover .apply__check {
+    background: var(--gradient-pink);
+    border-color: transparent;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 14px rgba(233, 30, 140, 0.3);
 }
 
 .apply__contact-strip {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
 }
 
 .apply__contact-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     font-size: 14px;
     color: var(--text-secondary);
+    transition: color 0.2s;
 }
+
+.apply__contact-item:hover { color: var(--text-primary); }
 
 .apply__contact-item svg {
     color: var(--cyan);
     flex-shrink: 0;
+    opacity: 0.8;
 }
 
-/* Form */
+/* ─── Form wrapper ─── */
 .apply__form-wrap {
-    padding: 40px;
-    border-color: rgba(216, 27, 96, 0.18);
+    padding: 44px 40px;
+    border: 1px solid rgba(233, 30, 140, 0.16);
     background: var(--glass-bg);
-    border-radius: 18px;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.apply__form-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-brand);
+    border-radius: 24px 24px 0 0;
 }
 
 .apply__form-title {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 800;
     font-family: 'Space Grotesk', sans-serif;
     color: var(--text-primary);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
 }
 
 .apply__form-sub {
     font-size: 13.5px;
     color: var(--text-muted);
-    margin-bottom: 28px;
+    margin-bottom: 32px;
+    line-height: 1.6;
 }
 
+/* ─── Form fields ─── */
 .apply__form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
+}
+
+.apply__form--long {
+    gap: 20px;
 }
 
 .apply__field {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     flex: 1;
 }
 
 .apply__field label {
-    font-size: 12.5px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     color: var(--text-secondary);
-    letter-spacing: 0.3px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
 }
 
 .apply__field input,
-.apply__field select {
-    padding: 14px 16px;
+.apply__field select,
+.apply__field textarea {
+    padding: 14px 18px;
     background: var(--surface);
     border: 1px solid var(--border);
     color: var(--text-primary);
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
     outline: none;
-    transition: box-shadow 0.22s ease, border-color 0.18s ease;
+    transition: all 0.25s ease;
     appearance: none;
     -webkit-appearance: none;
+}
+
+.apply__field textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 .apply__field input::placeholder {
@@ -115,9 +178,13 @@
 }
 
 .apply__field input:focus,
-.apply__field select:focus {
-    border-color: rgba(216, 27, 96, 0.5);
-    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1);
+.apply__field select:focus,
+.apply__field textarea:focus {
+    border-color: rgba(233, 30, 140, 0.55);
+    box-shadow:
+        0 0 0 4px rgba(233, 30, 140, 0.08),
+        0 4px 16px rgba(233, 30, 140, 0.06);
+    background: var(--surface-2);
 }
 
 .apply__field select option {
@@ -130,45 +197,27 @@
     gap: 16px;
 }
 
+/* ─── Submit button ─── */
 .apply__submit {
     width: 100%;
     justify-content: center;
-    padding: 16px 18px;
+    padding: 17px 18px;
     font-size: 16px;
-    margin-top: 6px;
-    border-radius: 999px;
+    margin-top: 8px;
+    border-radius: 14px;
+    letter-spacing: 0.2px;
 }
 
+/* ─── Disclaimer ─── */
 .apply__disclaimer {
     font-size: 11.5px;
     color: var(--text-muted);
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.55;
+    margin-top: 4px;
 }
 
-/* Form extensions for new inputs */
-.apply__form--long {
-    gap: 20px;
-}
-
-.apply__field textarea {
-    padding: 14px 16px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: 'Inter', sans-serif;
-    outline: none;
-    resize: vertical;
-    transition: box-shadow 0.22s ease, border-color 0.18s ease;
-}
-
-.apply__field textarea:focus {
-    border-color: rgba(216, 27, 96, 0.5);
-    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1);
-}
-
+/* ─── Radio/Checkbox ─── */
 .apply__radio-group,
 .apply__checkbox-group {
     display: flex;
@@ -192,6 +241,16 @@
     font-size: 14.5px;
     color: var(--text-primary);
     cursor: pointer;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.22s ease;
+}
+
+.apply__radio-label:hover,
+.apply__check-label:hover {
+    border-color: rgba(233, 30, 140, 0.28);
+    background: rgba(233, 30, 140, 0.04);
 }
 
 .apply__radio-label input[type="radio"],
@@ -206,53 +265,59 @@
     padding: 0;
 }
 
+/* ─── Conditional block ─── */
 .apply__conditional-block {
     animation: fadeUp 0.3s ease both;
-    padding: 16px;
-    background: rgba(216, 27, 96, 0.05);
-    border: 1px dashed rgba(216, 27, 96, 0.2);
-    border-radius: 12px;
+    padding: 18px;
+    background: rgba(233, 30, 140, 0.04);
+    border: 1px dashed rgba(233, 30, 140, 0.22);
+    border-radius: 14px;
 }
 
-/* Success */
+/* ─── Success state ─── */
 .apply__success {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
-    padding: 16px 0;
+    gap: 18px;
+    padding: 20px 0;
 }
 
 .apply__success-icon {
-    width: 80px;
-    height: 80px;
-    background: rgba(0, 200, 83, 0.12);
+    width: 88px;
+    height: 88px;
+    background: rgba(0, 200, 83, 0.1);
     border: 2px solid rgba(0, 200, 83, 0.4);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #00C853;
+    animation: pulse-glow 2s ease-in-out infinite;
+    box-shadow: 0 0 0 8px rgba(0, 200, 83, 0.05);
 }
 
 .apply__success h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
 }
 
 .apply__success p {
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.72;
+    max-width: 380px;
 }
 
 .apply__success strong {
     color: var(--pink-light);
 }
 
-@media(max-width: 900px) {
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
     .apply__inner {
         grid-template-columns: 1fr;
         gap: 48px;
@@ -260,5 +325,9 @@
 
     .apply__row {
         flex-direction: column;
+    }
+
+    .apply__form-wrap {
+        padding: 32px 24px;
     }
 }

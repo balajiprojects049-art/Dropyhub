@@ -54,9 +54,20 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    // Close menu on route change
     useEffect(() => {
         setMenuOpen(false);
     }, [location.pathname]);
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [menuOpen]);
 
     const navLinks = [
         { label: 'Home', to: '/' },
@@ -68,54 +79,86 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`navbar ${(scrolled || menuOpen) ? 'navbar--scrolled' : ''}`}>
-            <div className="navbar__inner container">
-                <Link to="/" className="navbar__logo">
-                    <img src="/logo.png" alt="DropyHub Logo" />
-                </Link>
+        <>
+            <nav className={`navbar ${(scrolled || menuOpen) ? 'navbar--scrolled' : ''}`}>
+                <div className="navbar__inner container">
+                    <Link to="/" className="navbar__logo">
+                        <img src="/logo.png" alt="DropyHub Logo" />
+                    </Link>
 
-                <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-                    {navLinks.map(link => (
-                        <li key={link.label}>
-                            <NavLink
-                                to={link.to}
-                                end={link.to === '/'}
-                                className={({ isActive }) =>
-                                    `navbar__link${isActive ? ' navbar__link--active' : ''}`
-                                }
+                    <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
+                        {/* Close button header inside the drawer */}
+                        <li className="navbar__drawer-header">
+                            <span className="navbar__drawer-title">DropyHub</span>
+                            <button
+                                className="navbar__close-btn"
+                                onClick={() => setMenuOpen(false)}
+                                aria-label="Close menu"
                             >
-                                {link.label}
-                            </NavLink>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </button>
                         </li>
-                    ))}
 
-                    {/* Theme toggle in mobile menu too */}
-                    <li className="navbar__toggle-mobile">
+                        {navLinks.map(link => (
+                            <li key={link.label}>
+                                <NavLink
+                                    to={link.to}
+                                    end={link.to === '/'}
+                                    className={({ isActive }) =>
+                                        `navbar__link${isActive ? ' navbar__link--active' : ''}`
+                                    }
+                                    onClick={() => setMenuOpen(false)}
+                                >
+                                    {link.label}
+                                </NavLink>
+                            </li>
+                        ))}
+
+                        {/* Theme toggle in mobile menu */}
+                        <li className="navbar__toggle-mobile">
+                            <ThemeToggle />
+                        </li>
+
+                        <li>
+                            <Link
+                                to="/apply"
+                                className="btn-primary navbar__cta"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                Join Now - Free
+                            </Link>
+                        </li>
+                    </ul>
+
+                    {/* Desktop right controls */}
+                    <div className="navbar__right">
                         <ThemeToggle />
-                    </li>
-
-                    <li>
-                        <Link to="/apply" className="btn-primary navbar__cta">
-                            Join Now - Free
-                        </Link>
-                    </li>
-                </ul>
-
-                {/* Desktop: theme toggle before hamburger */}
-                <div className="navbar__right">
-                    <ThemeToggle />
-                    <button
-                        className={`navbar__hamburger ${menuOpen ? 'open' : ''}`}
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        <span />
-                        <span />
-                        <span />
-                    </button>
+                        <button
+                            className={`navbar__hamburger ${menuOpen ? 'open' : ''}`}
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            aria-label="Toggle menu"
+                            aria-expanded={menuOpen}
+                        >
+                            <span />
+                            <span />
+                            <span />
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+            {/* Mobile backdrop overlay (outside nav so it covers everything) */}
+            {menuOpen && (
+                <div
+                    className="navbar__backdrop"
+                    onClick={() => setMenuOpen(false)}
+                    aria-hidden="true"
+                />
+            )}
+        </>
     );
 };
 
