@@ -65,16 +65,12 @@ const Footer = () => (
                 <div className="footer__col">
                     <div className="footer__col-title">Contact</div>
                     <div className="footer__contact-item">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.32 2 2 0 0 1 3.6 1.12h3a2 2 0 0 1 2 1.72 12.81 12.81 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45 12.81 12.81 0 0 0 2.81.7A2 2 0 0 1 21.73 16z" /></svg>
-                        +91 80XXX XXXXX
-                    </div>
-                    <div className="footer__contact-item">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-                        partners@dropyhub.com
+                        contact@dropyhub.com
                     </div>
                     <div className="footer__contact-item">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                        Hyderabad, Telangana, India
+                        3rd Floor, plot no. 11, Sector 3, HUDA Techno Enclave, Madhapur, Hyderabad, Telangana 500081
                     </div>
                     <div className="footer__srh-tag">
                         🟠 Official SRH TATA IPL 2025 Partner
