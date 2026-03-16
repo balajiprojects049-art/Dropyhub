@@ -133,13 +133,7 @@ const WarehousePage = () => {
                         ))}
                     </div>
 
-                    <div className="client-logos">
-                        <span className="client-logo">FLIPKART</span>
-                        <span style={{ fontSize: '1.5rem', opacity: 0.5 }}>•</span>
-                        <span className="client-logo">AMAZON</span>
-                        <span style={{ fontSize: '1.5rem', opacity: 0.5 }}>•</span>
-                        <span className="client-logo">E-CART</span>
-                    </div>
+
                 </div>
             </section>
 

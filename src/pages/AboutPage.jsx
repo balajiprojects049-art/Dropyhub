@@ -178,12 +178,12 @@ const AboutPage = () => (
                         Every number represents a real partner whose life we have helped improve. These are not projections — they are our reality today.
                     </p>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
+                <div className="about-pg__impact-grid">
                     {impactStats.map(stat => (
-                        <div key={stat.label} className="glass-card" style={{ padding: '32px 24px', textAlign: 'center', borderRadius: '16px' }}>
-                            <div style={{ fontSize: '2rem', fontWeight: '900', background: 'linear-gradient(135deg, var(--accent), var(--cyan))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', marginBottom: '8px' }}>{stat.num}</div>
-                            <div style={{ fontWeight: '700', fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '4px' }}>{stat.label}</div>
-                            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{stat.sub}</div>
+                        <div key={stat.label} className="about-pg__impact-card glass-card">
+                            <div className="about-pg__impact-num">{stat.num}</div>
+                            <div className="about-pg__impact-label">{stat.label}</div>
+                            <div className="about-pg__impact-sub">{stat.sub}</div>
                         </div>
                     ))}
                 </div>
@@ -221,7 +221,7 @@ const AboutPage = () => (
                     <h2 className="section-title">Not Just a Platform — <span className="gradient-text">A Complete Ecosystem</span></h2>
                     <div className="divider-glow" style={{ margin: '16px auto 0' }} />
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', maxWidth: '1000px', margin: '0 auto' }}>
+                <div className="about-pg__diff-grid">
                     {[
                         { emoji: '🔗', title: 'Multi-Platform Access', desc: 'Work with Swiggy, Zomato, Amazon, Blinkit, Zepto, Flipkart, BookMyShow and more — all through a single DropyHub partnership. No more single-company dependency.' },
                         { emoji: '💰', title: 'Guaranteed Weekly Pay', desc: 'Your performance bonus is credited every Monday — no delay, no excuse. Base salary is paid monthly with full transparency on every rupee you earn.' },
@@ -230,10 +230,10 @@ const AboutPage = () => (
                         { emoji: '🛵', title: 'Vehicle Without Ownership', desc: 'Start earning on day one even if you do not own a vehicle. Our affordable rental programme handles everything — maintenance, insurance, and repairs.' },
                         { emoji: '🏆', title: 'Recognition & Respect', desc: 'Monthly Star Awards, SRH TATA IPL edition prizes, annual ceremonies, and a leadership career track. At DropyHub, your hard work is always seen and celebrated.' },
                     ].map(item => (
-                        <div key={item.title} className="glass-card" style={{ padding: '28px 24px', borderRadius: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            <div style={{ fontSize: '2rem' }}>{item.emoji}</div>
-                            <h3 style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)', margin: 0 }}>{item.title}</h3>
-                            <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0, lineHeight: '1.6' }}>{item.desc}</p>
+                        <div key={item.title} className="about-pg__diff-card glass-card">
+                            <div className="about-pg__diff-emoji">{item.emoji}</div>
+                            <h3 className="about-pg__diff-title">{item.title}</h3>
+                            <p className="about-pg__diff-desc">{item.desc}</p>
                         </div>
                     ))}
                 </div>

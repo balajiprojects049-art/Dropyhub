@@ -224,8 +224,8 @@
 /* Values */
 .about-pg__values-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .about-pg__value-card {
@@ -299,3 +299,95 @@
         padding: 20px;
     }
 }
+
+/* Impact Stats */
+.about-pg__impact-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.about-pg__impact-card {
+    padding: 32px 20px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.about-pg__impact-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.about-pg__impact-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.about-pg__impact-sub {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Why We Are Different (Ecosystem) */
+.about-pg__diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-pg__diff-card {
+    padding: 28px 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-pg__diff-emoji {
+    font-size: 2rem;
+}
+
+.about-pg__diff-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.about-pg__diff-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media(max-width: 1200px) {
+    .about-pg__impact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media(max-width: 768px) {
+    .about-pg__impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-pg__impact-num {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .about-pg__impact-grid {
+        grid-template-columns: 1fr;
+    }
+}
