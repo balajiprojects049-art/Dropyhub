@@ -81,7 +81,7 @@ const Footer = () => (
 
         <div className="footer__bottom">
             <div className="container footer__bottom-inner">
-                <span>© 2025 DropyHub. All rights reserved.</span>
+                <span>© 2026 DropyHub. All rights reserved.</span>
                 <div className="footer__legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
