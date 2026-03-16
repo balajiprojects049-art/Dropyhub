@@ -66,6 +66,7 @@ const AboutPage = () => (
             breadcrumb={['Home', 'About Us']}
             imageSrc="/about_hero_new.webp"
             imageLightSrc="/about_hero_new.webp"
+            mobileObjectPosition="65% top"
         />
 
         {/* Mission & Vision */}

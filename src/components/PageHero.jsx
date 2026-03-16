@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './PageHero.css';
 import NewsTicker from './NewsTicker';
 
-const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, imageLightSrc, mobileImageSrc }) => {
+const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, imageLightSrc, mobileImageSrc, mobileObjectPosition }) => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
@@ -16,12 +16,15 @@ const PageHero = ({ tag, title, highlight, subtitle, breadcrumb, imageSrc, image
         return () => clearTimeout(timer);
     }, [imageSrc]);
 
+    const bgStyles = mobileObjectPosition ? { '--mobile-obj-pos': mobileObjectPosition } : {};
+
     return (
         <div className="page-hero-wrapper">
             <div 
                 className={`page-hero ${imageSrc ? 'page-hero--has-bg' : ''}`}
                 onMouseEnter={() => { if (imageSrc) setIsVisible(true); }}
                 onMouseLeave={() => { if (imageSrc) setIsVisible(false); }}
+                style={bgStyles}
             >
                 {imageSrc && (
                     <div className="page-hero__bg-layer">

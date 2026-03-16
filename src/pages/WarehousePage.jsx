@@ -286,7 +286,6 @@ const WarehousePage = () => {
                     </p>
                     <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                         <a href="#warehouse-apply" className="btn-primary">Apply as Executive</a>
-                        <a href="/contact" className="btn-outline">Contact Sales</a>
                     </div>
                 </div>
             </section>

@@ -344,11 +344,11 @@
     }
 
     .page-hero__bg-img--dark {
-        object-position: center top;
+        object-position: var(--mobile-obj-pos, 50% top);
     }
 
     [data-theme="light"] .page-hero__bg-img--light {
-        object-position: center top;
+        object-position: var(--mobile-obj-pos, 50% top);
     }
 
     .page-hero__title {

@@ -135,7 +135,7 @@ const HomePage = () => (
             <div className="container">
                 <div className="home-choose__inner">
                     <div className="home-choose__image-col">
-                        <img src="/delivery_partner_real.webp" alt="Happy DropyHub Delivery Partner" className="home-choose__img" />
+                        <img src="/delivery_partner_real.png" alt="Happy DropyHub Delivery Partner" className="home-choose__img" />
 
                         {/* Overlay floating cards */}
                         <div className="home-choose__float-card home-choose__float-card--top glass-card">
