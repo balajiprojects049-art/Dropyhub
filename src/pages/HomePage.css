@@ -17,9 +17,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg,
-        rgba(233, 30, 140, 0.04) 0%,
-        transparent 50%,
-        rgba(0, 229, 255, 0.03) 100%);
+            rgba(233, 30, 140, 0.04) 0%,
+            transparent 50%,
+            rgba(0, 229, 255, 0.03) 100%);
     pointer-events: none;
 }
 
@@ -43,8 +43,13 @@
     background: rgba(233, 30, 140, 0.04);
 }
 
-.home-stats-bar__item:first-child { padding-left: 0; }
-.home-stats-bar__item:last-child  { border-right: none; }
+.home-stats-bar__item:first-child {
+    padding-left: 0;
+}
+
+.home-stats-bar__item:last-child {
+    border-right: none;
+}
 
 .home-stats-bar__icon {
     width: 46px;
@@ -119,12 +124,14 @@
     transition: opacity 0.3s;
 }
 
-.home-overview__card:hover::before { opacity: 1; }
+.home-overview__card:hover::before {
+    opacity: 1;
+}
 
 .home-overview__card:hover {
     transform: translateY(-8px);
     border-color: rgba(233, 30, 140, 0.3);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3), 0 0 0 1px rgba(233,30,140,0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(233, 30, 140, 0.1);
 }
 
 .home-overview__icon {
@@ -195,8 +202,8 @@
     border-radius: 24px;
     padding: 24px;
     background: radial-gradient(circle at center,
-        rgba(233, 30, 140, 0.08) 0%,
-        transparent 70%);
+            rgba(233, 30, 140, 0.08) 0%,
+            transparent 70%);
 }
 
 .home-choose__img {
@@ -307,7 +314,7 @@
 .home-choose__item:hover {
     transform: translateX(8px);
     border-color: rgba(233, 30, 140, 0.28);
-    box-shadow: -4px 0 0 var(--pink), 0 12px 36px rgba(0,0,0,0.2);
+    box-shadow: -4px 0 0 var(--pink), 0 12px 36px rgba(0, 0, 0, 0.2);
 }
 
 .home-choose__icon {
@@ -344,8 +351,15 @@
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-16px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
 }
 
 /* ─── Steps Section ─── */
@@ -366,10 +380,10 @@
     right: 12%;
     height: 1px;
     background: linear-gradient(90deg,
-        transparent 0%,
-        var(--pink-dim) 20%,
-        rgba(0, 229, 255, 0.2) 80%,
-        transparent 100%);
+            transparent 0%,
+            var(--pink-dim) 20%,
+            rgba(0, 229, 255, 0.2) 80%,
+            transparent 100%);
     z-index: 0;
 }
 
@@ -479,12 +493,14 @@
     border-radius: 1px;
 }
 
-.home-b2b__card:hover::after { width: 60%; }
+.home-b2b__card:hover::after {
+    width: 60%;
+}
 
 .home-b2b__card:hover {
     transform: translateY(-8px);
     border-color: rgba(233, 30, 140, 0.28);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 .home-b2b__icon {
@@ -561,8 +577,13 @@
 }
 
 @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(calc(-50% - 24px)); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 24px));
+    }
 }
 
 .home-partners__logos-wrapper {
@@ -611,8 +632,8 @@
     width: 400px;
     height: 400px;
     background: radial-gradient(circle,
-        rgba(255, 100, 0, 0.15) 0%,
-        transparent 70%);
+            rgba(255, 100, 0, 0.15) 0%,
+            transparent 70%);
     top: -120px;
     right: 80px;
     pointer-events: none;
@@ -761,7 +782,7 @@
     background: rgba(0, 229, 255, 0.04);
     border-color: rgba(0, 229, 255, 0.2);
     transform: translateX(10px);
-    box-shadow: -3px 0 0 var(--cyan), 0 8px 28px rgba(0,229,255,0.08);
+    box-shadow: -3px 0 0 var(--cyan), 0 8px 28px rgba(0, 229, 255, 0.08);
 }
 
 .innovation-feature__icon {
@@ -820,8 +841,8 @@
     z-index: 1;
     padding: 8px;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.08) 0%,
-        rgba(255, 255, 255, 0.03) 100%);
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(255, 255, 255, 0.03) 100%);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 36px;
     max-width: 340px;
@@ -859,8 +880,15 @@
 }
 
 @keyframes float-slow {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* ─── Safety Section ─── */
@@ -894,12 +922,14 @@
     border-radius: 2px;
 }
 
-.safety-card:hover::before { width: 80%; }
+.safety-card:hover::before {
+    width: 80%;
+}
 
 .safety-card:hover {
     transform: translateY(-8px);
     border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
 }
 
 .safety-card__icon {
@@ -917,8 +947,8 @@
 
 .safety-card:hover .safety-card__icon {
     transform: scale(1.12);
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .safety-card h3 {
@@ -986,7 +1016,9 @@
         max-width: 360px;
     }
 
-    .home-steps__line { display: none; }
+    .home-steps__line {
+        display: none;
+    }
 
     .home-choose__inner {
         grid-template-columns: 1fr;
@@ -1003,7 +1035,9 @@
         padding: 36px 32px;
     }
 
-    .home-srh-teaser__right { order: -1; }
+    .home-srh-teaser__right {
+        order: -1;
+    }
 
     .home-innovation__inner {
         grid-template-columns: 1fr;
@@ -1011,7 +1045,9 @@
         gap: 56px;
     }
 
-    .innovation-feature { text-align: left; }
+    .innovation-feature {
+        text-align: left;
+    }
 
     .home-safety__grid {
         grid-template-columns: 1fr;
@@ -1051,8 +1087,13 @@
         border-bottom: 1px solid var(--border);
     }
 
-    .home-stats-bar__item:nth-child(2n) { border-right: none; }
-    .home-stats-bar__item:nth-last-child(-n+2) { border-bottom: none; }
+    .home-stats-bar__item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .home-stats-bar__item:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
 
     .home-choose__float-card {
         transform: scale(0.85);
