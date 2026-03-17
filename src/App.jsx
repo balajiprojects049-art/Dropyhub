@@ -8,6 +8,9 @@ import BenefitsPage from './pages/BenefitsPage';
 import PartnershipPage from './pages/PartnershipPage';
 import WarehousePage from './pages/WarehousePage';
 import ApplyPage from './pages/ApplyPage';
+import RefundPolicy from './pages/RefundPolicy';
+import TermsOfService from './pages/TermsOfService';
+import PrivacyPage from './pages/PrivacyPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
                     <Route path="partnership" element={<PartnershipPage />} />
                     <Route path="warehouse" element={<WarehousePage />} />
                     <Route path="apply" element={<ApplyPage />} />
+                    <Route path="refund-policy" element={<RefundPolicy />} />
+                    <Route path="terms-of-service" element={<TermsOfService />} />
+                    <Route path="privacy-policy" element={<PrivacyPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Route>
             </Routes>
